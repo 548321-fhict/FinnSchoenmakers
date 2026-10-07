@@ -3,81 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finn Schoenmakers - Portfolio</title>
+    <meta name="theme-color" content="#f1f0ec">
+    <meta name="description" content="Finn Schoenmakers is a game designer and 3D artist building worlds that tell stories.">
+    <title>Finn Schoenmakers — Game Designer &amp; 3D Artist</title>
     <link rel="stylesheet" href="Css/style.css">
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="aboutme.html" class="nav-link">About Me</a>
-            
-        </div>
-    </nav>
-
-    <!-- Projects Section -->
-    <div class="projects-container">
-        <h2 style="color: #f0f0f0; margin-bottom: 50px; font-size: 36px; font-weight: 300; letter-spacing: 2px; text-align: center;">My Projects</h2>
-        
-        <div class="projects-grid">
-            <a href="projectSplitstar.html" class="project-card">
-                <div class="project-image" style="background-image: url('Images/ProjectSplitstar.png');"></div>
-                <h3 class="project-title">Project Splitstar</h3>
-                <p class="project-description">A challenging 2.5D shooter with unique mechanics</p>
-                <p class="project-engine">Made in Unreal Engine 5.6</p>
-                <div class="project-link">View Project →</div>
-            </a>
-
-            <a href="projectSublevel.html" class="project-card">
-                <div class="project-image" style="background-image: url('Images/SublevelMainMenu.png');"></div>
-                <h3 class="project-title">Sublevel</h3>
-                <p class="project-description">Abandoned bunker horror game</p>
-                <p class="project-engine">Made in Unreal Engine 5.6</p>
-                <div class="project-link">View Project →</div>
-            </a>
-
-            <a href="targetShooter.html" class="project-card">
-                <div class="project-image" style="background-image: url('Images/Targetshooter.png');"></div>
-                <h3 class="project-title">Target Shooter</h3>
-                <p class="project-description">Carnival target shooting game</p>
-                <p class="project-engine">Made in Unreal Engine 5.6</p>
-                <div class="project-link">View Project →</div>
-            </a>
-        </div>
+<body class="home-page">
+    <div class="dream-scene" aria-hidden="true">
+        <div class="floating-form floating-form--large"><span></span></div>
+        <div class="floating-form floating-form--small"><span></span></div>
+        <div class="floating-form floating-form--far"><span></span></div>
     </div>
 
-    <!-- Main Container -->
-    <div class="main-container">
-        <!-- Left Section: Profile Card -->
-        <div class="profile-section">
-            <div class="profile-card">
-                <h1 class="profile-name">Finn<br>Schoenmakers</h1>
-                <div class="profile-image-placeholder">
-                    <img src="Images/CV foto.jpeg" alt="Profile Image" class="profile-image">
-                    <!-- Profile image -->
+    <header class="site-header" id="top">
+        <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
+        <nav class="nav-container" aria-label="Main navigation">
+            <a class="nav-link" href="#work">Work</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <p class="hero-kicker">Game designer · 3D artist · Level designer</p>
+            <h1 id="hero-title">I build worlds<br>that <span>tell stories.</span></h1>
+            <div class="hero-bottom">
+                <p class="hero-note">Curious places. Memorable journeys.<br>Made one detail at a time.</p>
+                <a class="scroll-cue" href="#work"><span class="scroll-arrow" aria-hidden="true">↓</span><span>Explore my work</span></a>
+            </div>
+        </section>
+
+        <section class="work-section section-shell" id="work" aria-labelledby="work-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Selected work / 01—03</p>
+                    <h2 id="work-title">Worlds in progress</h2>
                 </div>
+                <p class="section-aside">A few places I've helped bring to life.</p>
             </div>
-        </div>
 
-        <!-- Right Section: Bio Text -->
-        <div class="bio-section">
-            <div class="bio-card">
-                <p class="bio-text">
-                    I'm really passionate about level design and creating cool, visually interesting environments in games. I love building worlds that tell a story and guide players naturally through the space. Whether it's designing atmospheric settings or creating intricate level layouts, I'm all about making spaces that look amazing and feel great to play through. Every detail matters to me from the lighting to how the environment guides you through the game. I focus on making levels that are both beautiful and actually fun to explore.
-                </p>
+            <div class="projects-grid">
+                <a href="projectSublevel.html" class="project-card project-card--sublevel">
+                    <div class="project-image" style="background-image: url('Images/SublevelMainMenu.png');">
+                        <span class="project-number">01 / ENVIRONMENT</span>
+                        <span class="project-open" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="project-meta">
+                        <div><h3 class="project-title">Sublevel</h3><p class="project-description">A descent into an abandoned bunker.</p></div>
+                        <span class="project-engine">Unreal Engine 5.6</span>
+                    </div>
+                </a>
+
+                <a href="projectSplitstar.html" class="project-card project-card--splitstar">
+                    <div class="project-image" style="background-image: url('Images/ProjectSplitstar.png');">
+                        <span class="project-number">02 / GAMEPLAY</span>
+                        <span class="project-open" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="project-meta">
+                        <div><h3 class="project-title">Project Splitstar</h3><p class="project-description">A 2.5D shooter with a twist.</p></div>
+                        <span class="project-engine">Unreal Engine 5.6</span>
+                    </div>
+                </a>
+
+                <a href="targetShooter.html" class="project-card project-card--target">
+                    <div class="project-image" style="background-image: url('Images/Targetshooter.png');">
+                        <span class="project-number">03 / PROTOTYPE</span>
+                        <span class="project-open" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="project-meta">
+                        <div><h3 class="project-title">Target Shooter</h3><p class="project-description">A little carnival, a lot of targets.</p></div>
+                        <span class="project-engine">Unreal Engine 5.6</span>
+                    </div>
+                </a>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <section class="side-quests section-shell" aria-labelledby="side-quests-title">
+            <div class="section-heading section-heading--center">
+                <div>
+                    <p class="eyebrow">Beyond the main mission</p>
+                    <h2 id="side-quests-title">Side quests</h2>
+                </div>
+                <p class="section-aside">The sketches, experiments, and happy accidents<br>that make it into the worlds I build.</p>
+            </div>
+            <div class="quest-list">
+                <div class="quest-item"><span class="quest-index">A</span><span>Experiments</span><span class="quest-mark" aria-hidden="true">✳</span></div>
+                <div class="quest-item"><span class="quest-index">B</span><span>3D studies</span><span class="quest-mark" aria-hidden="true">◌</span></div>
+                <div class="quest-item"><span class="quest-index">C</span><span>Prototypes</span><span class="quest-mark" aria-hidden="true">↗</span></div>
+            </div>
+            <p class="quest-footnote">Currently making strange little things in Blender and Unreal.</p>
+        </section>
+
+        <section class="about-section section-shell" id="about" aria-labelledby="about-title">
+            <div class="about-copy">
+                <p class="eyebrow">A little about the creator</p>
+                <h2 id="about-title">Designing places<br>worth getting lost in.</h2>
+                <p class="about-text">Hi, I'm Finn — a game design student at Fontys University of Applied Sciences. I'm drawn to the spaces between things: how a path pulls you forward, how light hints at a story, and how a world can feel alive before a single word is spoken.</p>
+                <p class="about-text">I work across level design, UI, and VFX, and I'm exploring 3D art and environment creation. I learn by building, testing, and making the next version a little better.</p>
+                <a class="text-link" href="aboutme.html">More about me <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="about-portrait">
+                <img src="Images/CV foto.jpeg" alt="Portrait of Finn Schoenmakers">
+                <span class="portrait-caption">FINN SCHOENMAKERS / GAME DESIGN</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
         <div class="footer-content">
-            <p>Get in touch</p>
-            <div class="footer-links">
-                <a href="mailto:fischoenmakers@gmail.com" class="footer-link">Email</a>
-                <span class="footer-separator">•</span>
-                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank">LinkedIn</a>
+            <p class="eyebrow">Have a world in mind?</p>
+            <h2>Let's make<br>something <span>meaningful.</span></h2>
+            <a class="contact-link" href="mailto:fischoenmakers@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+            <div class="footer-bottom">
+                <span>© 2026 Finn Schoenmakers</span>
+                <div class="footer-links">
+                    <a class="footer-link" href="mailto:fischoenmakers@gmail.com">Email</a>
+                    <a class="footer-link" href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+                <a class="footer-link back-to-top" href="#top">Back to top ↑</a>
             </div>
         </div>
     </footer>
