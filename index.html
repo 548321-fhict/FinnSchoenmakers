@@ -6,15 +6,10 @@
     <meta name="theme-color" content="#f1f0ec">
     <meta name="description" content="Finn Schoenmakers is a game designer and 3D artist building worlds that tell stories.">
     <title>Finn Schoenmakers — Game Designer &amp; 3D Artist</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261008">
+    <link rel="stylesheet" href="Css/style.css?v=20261008-18">
+    <script src="javaScript/rock-video.js?v=20261008-5" defer></script>
 </head>
 <body class="home-page">
-    <div class="dream-scene" aria-hidden="true">
-        <div class="floating-form floating-form--large"><span></span></div>
-        <div class="floating-form floating-form--small"><span></span></div>
-        <div class="floating-form floating-form--far"><span></span></div>
-    </div>
-
     <header class="site-header" id="top">
         <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
         <nav class="nav-container" aria-label="Main navigation">
@@ -26,6 +21,10 @@
 
     <main>
         <section class="hero" aria-labelledby="hero-title">
+            <video class="hero-video" autoplay muted loop playsinline aria-label="Floating rock video">
+                <source src="Videos/0001-0440.mp4" type="video/mp4">
+            </video>
+            <canvas class="hero-video-canvas" aria-hidden="true"></canvas>
             <p class="hero-kicker">Game designer · 3D artist · Level designer</p>
             <h1 id="hero-title">I build worlds<br>that <span>tell stories.</span></h1>
             <div class="hero-bottom">

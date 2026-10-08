@@ -168,6 +168,8 @@ main,
 
 .floating-form {
     position: absolute;
+    overflow: hidden;
+    isolation: isolate;
     transform-style: preserve-3d;
     border: 1px solid rgba(117, 111, 88, 0.22);
     border-radius: 32% 68% 57% 43% / 43% 37% 63% 57%;
@@ -184,10 +186,18 @@ main,
     opacity: 0.78;
 }
 
+.floating-form--large {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+}
+
 .floating-form::before,
 .floating-form::after,
 .floating-form span {
     position: absolute;
+    z-index: 1;
     inset: 0;
     content: "";
     border-radius: inherit;
@@ -234,26 +244,17 @@ main,
     right: max(8%, calc((100vw - 1200px) / 2));
     width: clamp(190px, 24vw, 330px);
     aspect-ratio: 0.77;
-    animation: form-drift 34s ease-in-out infinite;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    animation: none;
 }
 
-.floating-form--small {
-    top: 735px;
-    left: max(4%, calc((100vw - 1340px) / 2));
-    width: clamp(115px, 14vw, 190px);
-    aspect-ratio: 0.82;
-    opacity: 0.57;
-    animation: form-drift-small 27s ease-in-out infinite;
-    animation-delay: -8s;
-}
-
+.floating-form--small,
 .floating-form--far {
-    top: 1170px;
-    right: 13%;
-    width: 95px;
-    aspect-ratio: 0.8;
-    opacity: 0.4;
-    animation: form-drift-small 39s ease-in-out infinite reverse;
+    display: none;
 }
 
 @keyframes form-drift {
@@ -271,11 +272,41 @@ main,
 /* Landing page */
 .hero {
     position: relative;
+    isolation: isolate;
     z-index: 1;
     width: min(100% - 96px, 1440px);
     min-height: min(690px, calc(100vh - 112px));
     margin: 0 auto;
     padding: clamp(115px, 18vh, 205px) 0 72px;
+}
+
+.hero-video,
+.hero-video-canvas {
+    position: absolute;
+    z-index: 0;
+    top: 54px;
+    right: -15%;
+    width: clamp(780px, 68vw, 1100px);
+    height: clamp(700px, 85vh, 900px);
+    --rock-zoom: 1.2;
+    display: block;
+    pointer-events: none;
+}
+
+.hero-video {
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-video-canvas {
+    opacity: 0;
+}
+
+.hero-kicker,
+.hero h1,
+.hero-bottom {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-kicker,
@@ -937,22 +968,12 @@ footer.footer--simple .footer-separator {
         margin-bottom: 65px;
     }
 
-    .floating-form--large {
-        top: 205px;
-        right: -60px;
-        width: 210px;
-        opacity: 0.38;
-    }
-
-    .floating-form--small {
-        top: 750px;
-        left: -38px;
-        width: 140px;
-        opacity: 0.35;
-    }
-
-    .floating-form--far {
-        display: none;
+    .hero-video,
+    .hero-video-canvas {
+        top: 122px;
+        right: -40%;
+        width: min(98vw, 520px);
+        height: min(66vh, 560px);
     }
 
     .main-container {
