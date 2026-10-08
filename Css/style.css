@@ -26,6 +26,7 @@ html {
 }
 
 body {
+    position: relative;
     min-height: 100%;
     overflow-x: hidden;
     background:
@@ -37,7 +38,7 @@ body {
 }
 
 body::before {
-    position: fixed;
+    position: absolute;
     z-index: 0;
     inset: 0;
     content: "";
@@ -306,7 +307,7 @@ main,
     font-size: clamp(62px, 10.5vw, 142px);
     font-weight: 500;
     line-height: 0.91;
-    letter-spacing: -0.085em;
+    letter-spacing: -0.045em;
 }
 
 .hero h1 span,
