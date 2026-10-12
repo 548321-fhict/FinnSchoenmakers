@@ -287,8 +287,8 @@ main,
     top: 54px;
     right: -15%;
     width: clamp(780px, 68vw, 1100px);
-    height: clamp(700px, 85vh, 900px);
-    --rock-zoom: 1.2;
+    height: clamp(800px, 100vh, 1080px);
+    --rock-zoom: 1;
     display: block;
     pointer-events: none;
 }
@@ -558,9 +558,25 @@ main,
     gap: 16px;
     min-height: 86px;
     padding: 0 22px;
+    border: 0;
+    background: transparent;
     color: var(--ink);
+    cursor: pointer;
     font-family: var(--display);
     font-size: 16px;
+    text-align: left;
+    transition: background 180ms ease;
+}
+
+.quest-item:hover {
+    background: rgba(104, 118, 91, 0.08);
+}
+
+.quest-item:focus-visible {
+    position: relative;
+    z-index: 1;
+    outline: 2px solid var(--mint);
+    outline-offset: -4px;
 }
 
 .quest-item + .quest-item {
@@ -575,6 +591,11 @@ main,
     margin-left: auto;
     color: var(--mint);
     font-size: 18px;
+    transition: transform 180ms ease;
+}
+
+.quest-item:hover .quest-mark {
+    transform: translateX(4px);
 }
 
 .quest-footnote {
@@ -582,6 +603,109 @@ main,
     color: var(--soft);
     font-size: 9px;
     text-align: right;
+}
+
+.quest-gallery-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    margin-top: 0;
+    opacity: 0;
+    transition: grid-template-rows 320ms cubic-bezier(0.2, 0.75, 0.3, 1), margin-top 320ms ease, opacity 220ms ease;
+}
+
+.quest-gallery-panel.is-open {
+    grid-template-rows: 1fr;
+    margin-top: 32px;
+    opacity: 1;
+}
+
+.quest-gallery-panel-inner {
+    min-height: 0;
+    overflow: hidden;
+    padding: 0 clamp(20px, 4vw, 42px);
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+.quest-gallery-panel.is-open .quest-gallery-panel-inner {
+    padding-top: 28px;
+    padding-bottom: 32px;
+    border-color: var(--line);
+    background: rgba(255, 255, 252, 0.48);
+}
+
+.quest-drawer-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.quest-drawer-header .eyebrow {
+    margin-bottom: 12px;
+}
+
+.quest-drawer-header h2 {
+    color: var(--ink);
+    font-family: var(--display);
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.06em;
+}
+
+.quest-drawer-close {
+    display: grid;
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    font-size: 27px;
+    line-height: 1;
+    transition: color 180ms ease, background 180ms ease;
+}
+
+.quest-drawer-close:hover {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.quest-drawer-close:focus-visible {
+    outline: 2px solid var(--mint);
+    outline-offset: 4px;
+}
+
+.quest-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.quest-gallery-item {
+    min-width: 0;
+    margin: 0;
+}
+
+.quest-gallery-item img,
+.quest-gallery-item video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--line);
+    background: var(--paper-shadow);
+    object-fit: cover;
+}
+
+.quest-gallery-item figcaption {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
 }
 
 .about-section {
@@ -749,6 +873,20 @@ main,
     font-weight: 400;
     line-height: 1.9;
     letter-spacing: 0;
+}
+
+.bio-text + .bio-text {
+    margin-top: 14px;
+}
+
+.project-list {
+    display: grid;
+    gap: 8px;
+    margin: 14px 0 0 20px;
+    padding: 0;
+    color: rgba(23, 23, 21, 0.83);
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 .cv-section {
@@ -934,6 +1072,15 @@ footer.footer--simple .footer-separator {
     .quest-item + .quest-item {
         border-top: 1px solid var(--line);
         border-left: 0;
+    }
+
+    .quest-gallery-panel-inner {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .quest-gallery {
+        grid-template-columns: 1fr;
     }
 
     .quest-footnote {

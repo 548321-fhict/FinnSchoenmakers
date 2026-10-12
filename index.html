@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f1f0ec">
     <meta name="description" content="Finn Schoenmakers is a game designer and 3D artist building worlds that tell stories.">
-    <title>Finn Schoenmakers — Game Designer &amp; 3D Artist</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261008-18">
+    <title>Finn Schoenmakers | Game Designer &amp; 3D Artist</title>
+    <link rel="stylesheet" href="Css/style.css?v=20261012-3">
     <script src="javaScript/rock-video.js?v=20261008-5" defer></script>
+    <script src="javaScript/side-quests.js?v=20261012-1" defer></script>
 </head>
 <body class="home-page">
     <header class="site-header" id="top">
@@ -36,7 +37,7 @@
         <section class="work-section section-shell" id="work" aria-labelledby="work-title">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">Selected work / 01—03</p>
+                    <p class="eyebrow">Selected work / 01 to 03</p>
                     <h2 id="work-title">Worlds in progress</h2>
                 </div>
                 <p class="section-aside">A few places I've helped bring to life.</p>
@@ -60,7 +61,7 @@
                         <span class="project-open" aria-hidden="true">↗</span>
                     </div>
                     <div class="project-meta">
-                        <div><h3 class="project-title">Project Splitstar</h3><p class="project-description">A 2.5D shooter with a twist.</p></div>
+                        <div><h3 class="project-title">Project Splitstar</h3><p class="project-description">A room-based 2.5D shooter built around movement and combat.</p></div>
                         <span class="project-engine">Unreal Engine 5.6</span>
                     </div>
                 </a>
@@ -71,7 +72,7 @@
                         <span class="project-open" aria-hidden="true">↗</span>
                     </div>
                     <div class="project-meta">
-                        <div><h3 class="project-title">Target Shooter</h3><p class="project-description">A little carnival, a lot of targets.</p></div>
+                        <div><h3 class="project-title">Target Shooter</h3><p class="project-description">A fast-paced aim trainer focused on feel and feedback.</p></div>
                         <span class="project-engine">Unreal Engine 5.6</span>
                     </div>
                 </a>
@@ -84,13 +85,31 @@
                     <p class="eyebrow">Beyond the main mission</p>
                     <h2 id="side-quests-title">Side quests</h2>
                 </div>
-                <p class="section-aside">The sketches, experiments, and happy accidents<br>that make it into the worlds I build.</p>
+                <p class="section-aside">The sketches, experiments, and happy accidents<br>that I make along the way.</p>
             </div>
             <div class="quest-list">
-                <div class="quest-item"><span class="quest-index">A</span><span>Experiments</span><span class="quest-mark" aria-hidden="true">✳</span></div>
-                <div class="quest-item"><span class="quest-index">B</span><span>3D studies</span><span class="quest-mark" aria-hidden="true">◌</span></div>
-                <div class="quest-item"><span class="quest-index">C</span><span>Prototypes</span><span class="quest-mark" aria-hidden="true">↗</span></div>
+                <button class="quest-item" type="button" data-gallery="experiments" aria-expanded="false" aria-controls="quest-gallery-panel">
+                    <span class="quest-index">A</span><span>Experiments</span><span class="quest-mark" aria-hidden="true">✳</span>
+                </button>
+                <button class="quest-item" type="button" data-gallery="art" aria-expanded="false" aria-controls="quest-gallery-panel">
+                    <span class="quest-index">B</span><span>3D art</span><span class="quest-mark" aria-hidden="true">◌</span>
+                </button>
+                <button class="quest-item" type="button" data-gallery="prototypes" aria-expanded="false" aria-controls="quest-gallery-panel">
+                    <span class="quest-index">C</span><span>Prototypes</span><span class="quest-mark" aria-hidden="true">↗</span>
+                </button>
             </div>
+            <section class="quest-gallery-panel" id="quest-gallery-panel" aria-labelledby="quest-gallery-title" aria-hidden="true" inert>
+                <div class="quest-gallery-panel-inner">
+                    <div class="quest-drawer-header">
+                        <div>
+                            <p class="eyebrow">Side quests / gallery</p>
+                            <h2 id="quest-gallery-title" tabindex="-1"></h2>
+                        </div>
+                        <button class="quest-drawer-close" type="button" aria-label="Close gallery">×</button>
+                    </div>
+                    <div class="quest-gallery" id="quest-gallery-content"></div>
+                </div>
+            </section>
             <p class="quest-footnote">Currently making strange little things in Blender and Unreal.</p>
         </section>
 
@@ -98,7 +117,7 @@
             <div class="about-copy">
                 <p class="eyebrow">A little about the creator</p>
                 <h2 id="about-title">Designing places<br>worth getting lost in.</h2>
-                <p class="about-text">Hi, I'm Finn — a game design student at Fontys University of Applied Sciences. I'm drawn to the spaces between things: how a path pulls you forward, how light hints at a story, and how a world can feel alive before a single word is spoken.</p>
+                <p class="about-text">Hi, I'm Finn, a game design student at Fontys University of Applied Sciences. I'm drawn to the spaces between things: how a path pulls you forward, how light hints at a story, and how a world can feel alive before a single word is spoken.</p>
                 <p class="about-text">I work across level design, UI, and VFX, and I'm exploring 3D art and environment creation. I learn by building, testing, and making the next version a little better.</p>
                 <a class="text-link" href="aboutme.html">More about me <span aria-hidden="true">↗</span></a>
             </div>
@@ -108,6 +127,43 @@
             </div>
         </section>
     </main>
+
+    <template id="gallery-experiments">
+        <figure class="quest-gallery-item quest-gallery-item--video">
+            <video controls preload="metadata">
+                <source src="Videos/0001-0440.mp4" type="video/mp4">
+            </video>
+            <figcaption>Floating rock study</figcaption>
+        </figure>
+        <figure class="quest-gallery-item">
+            <img src="Images/FoggyForest.jpg" alt="Fog-covered forest environment study" loading="lazy">
+            <figcaption>Foggy forest</figcaption>
+        </figure>
+    </template>
+
+    <template id="gallery-art">
+        <figure class="quest-gallery-item">
+            <img src="Images/SublevelMainMenu.png" alt="Sublevel environment artwork" loading="lazy">
+            <figcaption>Sublevel environment</figcaption>
+        </figure>
+        <figure class="quest-gallery-item">
+            <img src="Images/FoggyForest.jpg" alt="Fog-covered forest environment artwork" loading="lazy">
+            <figcaption>Forest environment</figcaption>
+        </figure>
+    </template>
+
+    <template id="gallery-prototypes">
+        <figure class="quest-gallery-item quest-gallery-item--video">
+            <video controls preload="metadata" poster="Images/Targetshooter.png">
+                <source src="Videos/Aim%20minigame.mp4" type="video/mp4">
+            </video>
+            <figcaption>Target Shooter prototype</figcaption>
+        </figure>
+        <figure class="quest-gallery-item">
+            <img src="Images/Targetshooter.png" alt="Target Shooter prototype artwork" loading="lazy">
+            <figcaption>Target Shooter</figcaption>
+        </figure>
+    </template>
 
     <footer class="footer" id="contact">
         <div class="footer-content">
