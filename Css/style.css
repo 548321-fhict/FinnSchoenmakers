@@ -748,14 +748,15 @@ main,
 
 /* Footer */
 .footer {
+    width: 100%;
     margin-top: 0;
-    padding: 85px max(48px, calc((100vw - 1200px) / 2)) 26px;
+    padding: 85px max(48px, calc((100vw - 1440px) / 2)) 26px;
     border-top: 1px solid var(--line);
     background: var(--paper-shadow);
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 

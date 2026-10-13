@@ -42,6 +42,14 @@ if (video && canvas && hero) {
                 Math.abs(pixels[index + 2] - matte[2])
             );
             const alpha = Math.max(0, Math.min(1, (distance - tolerance) / feather));
+            if (alpha > 0 && alpha < 1) {
+                for (let channel = 0; channel < 3; channel++) {
+                    pixels[index + channel] = Math.max(
+                        0,
+                        Math.min(255, (pixels[index + channel] - matte[channel] * (1 - alpha)) / alpha)
+                    );
+                }
+            }
             pixels[index + 3] *= alpha;
         }
         context.putImageData(frame, 0, 0);
