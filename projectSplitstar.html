@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Splitstar - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261012-2">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-6">
 </head>
-<body>
+<body class="project-page project-page--splitstar">
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html#work" class="nav-link">Work</a>
-            <a href="aboutme.html" class="nav-link">About</a>
-            <a href="mailto:fischoenmakers@gmail.com" class="nav-link">Contact</a>
+        <div class="navbar-inner">
+            <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
+            <div class="nav-container">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="aboutme.html" class="nav-link">About</a>
+                <a href="mailto:fischoenmakers@gmail.com" class="nav-link">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -21,7 +24,8 @@
         <div class="bio-card" style="flex: 1;">
             <a href="index.html" class="back-link">← Back to Home</a>
             
-            <h2 style="color: #171715; margin: 30px 0 20px 0; font-size: 36px; font-weight: 300; letter-spacing: 2px;">Project Splitstar</h2>
+            <h1 class="project-title">Project Splitstar</h1>
+            <p class="project-type">Room-based shooter · Level design · Visual effects &amp; UI</p>
             
             <div style="margin: 30px 0;">
                 <video width="100%" height="auto" controls style="border-radius: 10px; background: #000;">
@@ -31,29 +35,39 @@
 
             <!-- Overview -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Overview</h3>
+                <h3>Overview</h3>
                 <p class="bio-text">
-                    Splitstar is a combat-focused 2.5D shooter where players progress through a series of rooms, fighting enemies and mastering movement mechanics. I worked on the level design, visual effects, and user interface.
+                    Splitstar is a combat-focused 2.5D shooter where players fight through a sequence of rooms. I worked on the level design, visual effects, and user interface, shaping the route so each space builds on the movement and combat introduced before it.
                 </p>
                 <p class="bio-text">
-                    My goal was to create a clear, engaging experience with carefully paced encounters and a gradual increase in difficulty. Each room introduces a new challenge while reinforcing the game's core mechanics, giving the level a sense of progression.
+                    I began with a room-by-room plan, then used Unreal blockouts to test how the spaces played before moving into visual polish. That process helped me connect the overall progression to the details players read moment to moment: routes, obstacles, effects, and on-screen information.
                 </p>
+                <div class="project-gallery" aria-label="Splitstar level-design process">
+                    <figure>
+                        <img src="Images/Splitstar/splitstar-room-progression.png" alt="Splitstar level plan showing a tutorial, connected rooms, and an end point" loading="lazy">
+                        <figcaption>The plan maps the route from a tutorial through combat spaces to the level exit.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Images/Splitstar/splitstar-editor-blockout.png" alt="Unreal Engine blockout of a long Splitstar combat room with cover and obstacles" loading="lazy">
+                        <figcaption>I brought the route into Unreal to test its scale, cover placement, and movement opportunities in 3D.</figcaption>
+                    </figure>
+                </div>
             </div>
 
             <!-- Features -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Features</h3>
+                <h3>Design &amp; gameplay</h3>
                 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Spatial Design & Player Flow</h4>
+                <h4>Spatial design &amp; player flow</h4>
                 <p class="bio-text">
-                    I divided the level into rooms, each with a clear gameplay purpose. The layout, enemy placement, and environment guide players without explicit instructions, so they can focus on the encounter rather than searching for where to go.
+                    I divided the level into rooms with distinct gameplay purposes. Their layouts and obstacles help players understand where they can move, keeping attention on the encounter rather than on finding a route.
                 </p>
                 <p class="bio-text">
-                    Room size and shape help control the pace. Smaller spaces create pressure and limit movement, while larger arenas reward positioning and awareness. The route stays clear, but each encounter challenges players to decide how to move through it.
+                    Room size and shape control the pace. Tighter spaces create pressure, while more open arenas reward positioning and awareness. Across the level, the layout stays readable while asking players to keep moving. This variety helps each encounter feel like a new step in the journey rather than another version of the same room.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Room Design</h4>
-                <p class="bio-text">Each room has a distinct role in the progression, building from the introduction of the core mechanics to a final test of the player's skills.</p>
+                <h4>Room-by-room progression</h4>
+                <p class="bio-text">Each room has a distinct role in the progression, building from the introduction of the core mechanics to a final test of the player's skills. I used this sequence to introduce challenges in stages, then combine them in later encounters.</p>
                 <ul class="project-list">
                     <li><strong>Introduction:</strong> teaches the core mechanics and basic combat.</li>
                     <li><strong>Vertical gameplay:</strong> focuses on upward movement and avoiding hazards.</li>
@@ -61,69 +75,80 @@
                     <li><strong>Gauntlet:</strong> tests endurance and punishes mistakes.</li>
                     <li><strong>Boss arena:</strong> uses an open layout that demands constant movement and awareness.</li>
                 </ul>
+                <div class="project-gallery" aria-label="Splitstar finished combat environments">
+                    <figure>
+                        <img src="Images/Splitstar/splitstar-final-room.png" alt="A finished Splitstar arena with layered platforms, industrial lighting, and red-lit doors" loading="lazy">
+                        <figcaption>Lighting, platforms, and contrasting door lights make the combat space readable without losing its industrial mood.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Images/Splitstar/splitstar-corridor.png" alt="A long finished Splitstar corridor with repeated metal panels and bright strip lighting" loading="lazy">
+                        <figcaption>A longer corridor gives the room sequence a visual breather while keeping the same metallic setting.</figcaption>
+                    </figure>
+                </div>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Environmental Design & Readability</h4>
+                <h4>Environment &amp; readability</h4>
                 <p class="bio-text">
                     I designed the environment to make gameplay clear while maintaining a consistent visual style. Walls, floors, and obstacles define movement space and interaction areas. Careful spacing and alignment help prevent visual clutter during combat.
                 </p>
                 <p class="bio-text">
-                    Curved wall elements make the rooms feel less artificial. I also enclosed the level to maintain immersion and hide the world beyond the playable area.
+                    Curved wall elements make the rooms feel less artificial. I also enclosed the level to maintain immersion and hide the world beyond the playable area. Repeating the industrial materials across different spaces ties the sequence together, while room layouts and lighting help distinguish one encounter from the next.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Weapon Feedback</h4>
+                <h4>Weapon feedback</h4>
                 <p class="bio-text">
-                    I designed the weapon effects to communicate player actions and make combat feel responsive. Muzzle flashes provide immediate feedback when firing, while impact sparks make hits easier to read and more satisfying.
+                    I designed the weapon effects to make combat feel responsive. The muzzle flash gives players immediate visual confirmation when they fire, helping connect an input to what happens on screen.
                 </p>
-                <p class="bio-text">
-                    I kept the bullet visuals in a separate system to avoid workflow conflicts while still representing the intended behavior. This let me develop the feedback effects without interfering with other parts of the workflow.
-                </p>
+                <div class="project-gallery" aria-label="Splitstar combat visual effects">
+                    <figure>
+                        <img src="Images/Splitstar/splitstar-muzzle-flash.gif" alt="Animated muzzle flash and projectile effect in a Splitstar room" loading="lazy">
+                        <figcaption>The muzzle flash makes each shot visible against the dark metal walls.</figcaption>
+                    </figure>
+                </div>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Explosion Effect</h4>
+                <h4>Layered explosion effect</h4>
                 <p class="bio-text">
-                    The explosion was the most complex effect to create because I couldn't find suitable references that matched the game's style. I decided to build it in layers, starting with sparks adapted from the impact effect and a spherical smoke burst based on a modified dust effect.
+                    I built the explosion in layers, combining sparks, smoke, fire, and a flash of light so the impact reads clearly against the dark environment.
                 </p>
                 <p class="bio-text">
-                    I created the fire by adjusting the smoke system, then added a flash of light to increase the effect's intensity. Together, these elements create a cohesive explosion that fits the game's visual style.
+                    Starting with elements from the impact and dust effects helped me build a larger effect that still felt consistent with the rest of the game. Combining the layers gave the explosion a clear beginning and impact, while its bright flash stands out against the darker environment.
                 </p>
+                <div class="project-gallery" aria-label="Splitstar explosion effect">
+                    <figure>
+                        <img src="Images/Splitstar/splitstar-explosion.gif" alt="Animated explosion effect in a Splitstar room" loading="lazy">
+                        <figcaption>Sparks, smoke, fire, and light combine into a single readable impact.</figcaption>
+                    </figure>
+                </div>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">HUD Structure</h4>
+                <h4>HUD structure</h4>
                 <p class="bio-text">
                     I divided the HUD into two parts to keep information organized. The player-focused section displays health, ability cooldowns, and active power-ups. These details stay readable at a glance so players can make quick decisions during combat.
                 </p>
                 <p class="bio-text">
-                    The system-focused section shows progression details, such as the current room and score. This gives players useful context without distracting them from the action.
+                    The system-focused section shows progression details, such as the current room and score. This gives players useful context without distracting them from the action. Separating immediate player information from level progress made it easier to scan the HUD during a fast encounter.
                 </p>
 
             </div>
 
             <!-- Development -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Development</h3>
+                <h3>Development</h3>
                 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Process</h4>
+                <h4>Planning, testing &amp; iteration</h4>
                 <p class="bio-text">
                     I started by mapping out the level in Figma, then built greybox blockouts in Unreal Engine to test navigation, scale, and movement. This gave me a chance to check the level's basic flow before committing to detailed environments.
                 </p>
                 <p class="bio-text">
-                    During playtests, I checked whether the layout felt clear and intuitive. After receiving feedback, I refined the level by adding elevation, increasing the challenge in key areas, and introducing paths that asked players to weigh risk against reward.
+                    During playtests, I checked whether the layout felt clear and intuitive, and whether the movement spaces supported the intended encounters. I then refined the level by adding elevation, increasing the challenge in key areas, and introducing paths that asked players to weigh risk against reward.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Key Learnings</h4>
-                <p class="bio-text">
-                    <strong>Structured pacing and difficulty progression sustain engagement.</strong> Varied rooms and encounters can challenge players without overwhelming them.
-                </p>
-                <p class="bio-text">
-                    <strong>Greyboxing supports fast iteration.</strong> Testing navigation and scale early helps prevent major redesigns later.
-                </p>
-                <p class="bio-text">
-                    <strong>Player feedback is essential.</strong> Playtesting helped validate my design decisions and gave me confidence to move on to final polish.
-                </p>
-                <p class="bio-text">
-                    <strong>VFX has more impact when integrated early.</strong> Adding effects late in production limits how much they can contribute to the overall experience.
-                </p>
-                <p class="bio-text">
-                    <strong>Clear UI improves readability.</strong> Functional clarity can support gameplay without adding visual complexity.
-                </p>
+                <h4>What I learned</h4>
+                <ul class="project-learning-list">
+                    <li><strong>Progression sustains engagement</strong><span>Varying rooms and encounters can raise the challenge gradually without overwhelming the player.</span></li>
+                    <li><strong>Blockouts support fast iteration</strong><span>Testing navigation and scale early makes layout changes easier before detailed environments are built.</span></li>
+                    <li><strong>Playtesting validates decisions</strong><span>Testing helped me check whether the route and difficulty worked for players before moving on to final polish.</span></li>
+                    <li><strong>Integrate effects with the experience</strong><span>Planning for VFX alongside combat helps effects communicate gameplay instead of feeling like a late addition.</span></li>
+                    <li><strong>Clear UI supports quick decisions</strong><span>Organizing player information separately from room and score progress keeps the HUD easier to scan during combat.</span></li>
+                </ul>
             </div>
         </div>
     </div>

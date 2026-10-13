@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Target Shooter - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261012-2">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-6">
 </head>
-<body>
+<body class="project-page project-page--target">
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html#work" class="nav-link">Work</a>
-            <a href="aboutme.html" class="nav-link">About</a>
-            <a href="mailto:fischoenmakers@gmail.com" class="nav-link">Contact</a>
+        <div class="navbar-inner">
+            <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
+            <div class="nav-container">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="aboutme.html" class="nav-link">About</a>
+                <a href="mailto:fischoenmakers@gmail.com" class="nav-link">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -21,7 +24,8 @@
         <div class="bio-card" style="flex: 1;">
             <a href="index.html" class="back-link">← Back to Home</a>
             
-            <h2 style="color: #171715; margin: 30px 0 20px 0; font-size: 36px; font-weight: 300; letter-spacing: 2px;">Target Shooter</h2>
+            <h1 class="project-title">Target Shooter</h1>
+            <p class="project-type">Aim-training prototype · Rapid development · Unreal Engine</p>
             
             <div style="margin: 30px 0;">
                 <video width="100%" height="auto" controls style="border-radius: 10px; background: #000;">
@@ -30,88 +34,80 @@
             </div>
     <!-- Overview -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Overview</h3>
+                <h3>Overview</h3>
                 <p class="bio-text">
-                    Target Shooter is a fast-paced aim-training game I developed in one week. With such a short timeframe, I wanted to focus on what makes shooting feel good rather than trying to build a large or complex game.
+                    Target Shooter is a fast-paced aim-training game I developed in one week. With such a short timeframe, I focused on what makes shooting feel good instead of trying to build a large or complex game.
                 </p>
                 <p class="bio-text">
-                    I focused on responsive controls, clear hit feedback, and consistent pacing. Keeping the scope small helped me deliver a polished, functional experience within the time limit.
+                    The prototype is built around responsive controls, clear hit feedback, and a steady rhythm of targets. Keeping the scope small let me spend the available time testing and refining the core interaction, then polish the presentation around it.
                 </p>
             </div>
 
             <!-- Features -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Features</h3>
+                <h3>Design &amp; gameplay</h3>
                 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Shooting Responsiveness</h4>
+                <h4>Responsive shooting</h4>
                 <p class="bio-text">
                     The shooting system is built around immediate feedback. When the player fires, a raycast registers the shot at once, making the controls feel fast and precise.
                 </p>
                 <p class="bio-text">
-                    Targets react as soon as they are hit, reinforcing the connection between the player's input and the result. That direct response is central to making the shooting feel satisfying.
+                    Targets react as soon as they are hit, reinforcing the connection between the player's input and the result. This direct response is central to making the shooting feel satisfying, so I kept the interaction immediate rather than adding delays or extra steps.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Feedback & Clarity</h4>
+                <h4>Feedback &amp; clarity</h4>
                 <p class="bio-text">
                     Clear feedback was central to the experience. A distinct sound confirms each successful shot, and targets disappear on impact. Their presentation also makes them easy to track.
                 </p>
                 <p class="bio-text">
-                    These simple signals make each hit feel more rewarding. Moving targets add challenge and variety without changing the core shooting mechanic.
+                    These signals make a successful hit easy to understand and more rewarding. Moving targets add challenge and variety while keeping the same simple shooting mechanic at the heart of the experience.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Reference-Based Design</h4>
+                <h4>Reference-based design</h4>
                 <p class="bio-text">
                     I took inspiration from aim trainers such as KovaaK's FPS Aim Trainer, especially their emphasis on responsiveness and feedback. I applied those fundamentals through instant shots, clear audio confirmation, and simple, readable targets.
                 </p>
                 <p class="bio-text">
-                    From there, I developed the presentation in my own direction while keeping the focus on the same clear and responsive shooting experience.
+                    From there, I developed the presentation in my own direction while keeping the focus on a clear, responsive shooting experience. The references helped me identify what to prioritize, while testing shaped how those ideas worked in my prototype.
                 </p>
             </div>
 
             <!-- Development -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Development</h3>
+                <h3>Development</h3>
                 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Reverse Engineering the Core Mechanic</h4>
+                <h4>Building the core mechanic</h4>
                 <p class="bio-text">
                     I began by recreating a simple shooting system to understand how it worked. I used a raycast to detect hits instantly, matching the responsiveness I wanted from an aim trainer.
                 </p>
                 <p class="bio-text">
-                    I then added basic feedback, including hit sounds and target reactions. Even at this early stage, the gameplay felt close to my goal, showing me how much a strong core mechanic can achieve.
+                    I then added basic feedback, including hit sounds and target reactions. Testing these elements early helped me judge whether the central action felt right before building more systems around it.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Rapid Prototyping & Iteration</h4>
+                <h4>Rapid prototyping &amp; iteration</h4>
                 <p class="bio-text">
                     Because the project had a short timeframe, I tested ideas quickly rather than spending too long planning. I prototyped target spawning, movement, and shooting interactions, then adjusted or removed anything that didn't feel right.
                 </p>
                 <p class="bio-text">
-                    I also tuned details such as fire rate, spawn timing, and target speed. Testing these values helped me create a more balanced and satisfying experience.
+                    I also tuned details such as fire rate, spawn timing, and target speed. Changing these values affected both the difficulty and rhythm, so I tested them together to create a more balanced experience.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Focus on Core Over Complexity</h4>
+                <h4>Focus on the core over complexity</h4>
                 <p class="bio-text">
                     I kept the visuals minimal early on so I could focus on how the shooting felt. Once the mechanics were working well, I refined the presentation.
                 </p>
                 <p class="bio-text">
-                    This order kept development focused on what mattered most: making a simple mechanic feel as good as possible before adding polish.
+                    This order kept development focused on what mattered most: making a simple mechanic feel as good as possible before adding polish. It also gave me a clear way to prioritize work within the one-week limit.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Key Learnings</h4>
-                <p class="bio-text">
-                    <strong>Responsiveness is critical.</strong> Even a few frames of input delay can make shooting feel sluggish. Immediate responses make the experience feel precise and satisfying.
-                </p>
-                <p class="bio-text">
-                    <strong>Feedback drives satisfaction.</strong> Sound and visual reactions reinforce successful actions. Every hit needs immediate confirmation.
-                </p>
-                <p class="bio-text">
-                    <strong>Simple mechanics can be powerful.</strong> I worried the core mechanic might be too basic, but testing showed me that one well-executed idea can be more effective than many underdeveloped features.
-                </p>
-                <p class="bio-text">
-                    <strong>Rapid iteration saves time.</strong> Testing ideas quickly and discarding what doesn't work keeps development moving. It's more valuable to test several versions in a few hours than to spend days perfecting an idea that doesn't feel right.
-                </p>
-                <p class="bio-text">
-                    <strong>Build the core gameplay before polishing the visuals.</strong> Keeping visuals minimal let me focus on the shooting. Once the mechanic felt solid, I could add polish to support an already enjoyable experience.
-                </p>
+                <h4>What I learned</h4>
+                <ul class="project-learning-list">
+                    <li><strong>Responsiveness is critical</strong><span>Even a small delay can make shooting feel sluggish. Immediate input and hit registration make the experience feel precise and satisfying.</span></li>
+                    <li><strong>Feedback drives satisfaction</strong><span>Sound and visual reactions reinforce successful actions. Each hit needs a clear, immediate confirmation.</span></li>
+                    <li><strong>Simple mechanics can be powerful</strong><span>One well-executed idea can be more effective than many underdeveloped features. Testing helped me trust the focused scope.</span></li>
+                    <li><strong>Rapid iteration saves time</strong><span>Trying variations and discarding what does not work kept development moving within the short timeframe.</span></li>
+                    <li><strong>Build the core before polishing</strong><span>Keeping visuals minimal let me focus on shooting first, then add polish to support an already solid mechanic.</span></li>
+                </ul>
             </div>
         </div>
     </div>

@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sublevel - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261012-2">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-6">
 </head>
-<body>
+<body class="project-page project-page--sublevel">
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html#work" class="nav-link">Work</a>
-            <a href="aboutme.html" class="nav-link">About</a>
-            <a href="mailto:fischoenmakers@gmail.com" class="nav-link">Contact</a>
+        <div class="navbar-inner">
+            <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
+            <div class="nav-container">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="aboutme.html" class="nav-link">About</a>
+                <a href="mailto:fischoenmakers@gmail.com" class="nav-link">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -21,7 +24,8 @@
         <div class="bio-card" style="flex: 1;">
             <a href="index.html" class="back-link">← Back to Home</a>
             
-            <h2 style="color: #171715; margin: 30px 0 20px 0; font-size: 36px; font-weight: 300; letter-spacing: 2px;">Sublevel</h2>
+            <h1 class="project-title">Sublevel</h1>
+            <p class="project-type">Atmospheric exploration · Level design · Unreal Engine</p>
             
             <div style="margin: 30px 0;">
                 <video width="100%" height="auto" controls style="border-radius: 10px; background: #000;">
@@ -31,80 +35,88 @@
 
             <!-- Overview -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Overview</h3>
+                <h3>Overview</h3>
                 <p class="bio-text">
-                    Sublevel is a horror exploration game set in an abandoned underground bunker. I designed and built the full level layout, with a focus on spatial design, atmospheric lighting, and environmental storytelling.
+                    Sublevel is a horror exploration game set in an abandoned underground bunker. I designed the level around a simple question: how can the space make players curious about what lies around the next corner? Rather than relying on constant prompts, I used a connected route of rooms and corridors to give exploration its own momentum.
                 </p>
                 <p class="bio-text">
-                    My goal was to create an immersive, unsettling experience where players uncover the space without explicit guidance. I used pacing, lighting, and subtle environmental clues to guide them through the bunker and shape how each area feels.
+                    My work moved from planning the overall route to testing spaces in Unreal. The images below show that progression, from early layout ideas to room blockouts that helped me consider scale, atmosphere, and the player’s view.
                 </p>
+                <div class="project-gallery" aria-label="Sublevel level-design process">
+                    <figure>
+                        <img src="Images/Sublevel/sublevel-layout-overview.png" alt="Overhead view of the connected Sublevel route and its starting room" loading="lazy">
+                        <figcaption>I started with a broad map to plan how the bunker’s rooms connect and where the journey begins.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Images/Sublevel/sublevel-layout-variations.png" alt="Three alternative tiled layouts for the Sublevel route" loading="lazy">
+                        <figcaption>Comparing route variations helped me explore how branches and loops could shape discovery and pacing.</figcaption>
+                    </figure>
+                </div>
             </div>
 
             <!-- Features -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Features</h3>
+                <h3>Design approach</h3>
                 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Spatial Design & Player Flow</h4>
+                <h4>Spatial design &amp; player flow</h4>
                 <p class="bio-text">
-                    I designed corridors and rooms to guide players through visual cues rather than explicit markers. Branching paths and loops make the bunker feel larger and less predictable, building suspense as players decide where to go next.
+                    I used connected corridors, rooms, branches, and loops to make the bunker feel larger and less predictable. The route gives players reasons to explore while keeping the next part of the journey discoverable.
                 </p>
                 <p class="bio-text">
-                    The layout shifts between tight corridors and narrow corners and calmer, open spaces. This contrast controls pacing and emotional intensity, while making players question where they are and reinforcing the horror atmosphere.
-                </p>
-
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Atmospheric Lighting System</h4>
-                <p class="bio-text">
-                    I placed flickering lights near key areas to guide players while keeping them uneasy. Cold, desaturated corridor lighting creates a sterile, eerie mood, while warmer pools of light offer a sense of psychological safety.
-                </p>
-                <p class="bio-text">
-                    Dynamic shadows add depth and unpredictability, and post-processing effects such as film grain and bloom create a gritty, cinematic look. I tested the lighting in gameplay, where it looked and felt very different from the editor, then adjusted it to suit the player's view.
+                    The layout shifts between tight passages and more open spaces. That contrast controls the pace: a brief release from confinement makes the next narrow passage feel more intense. I considered how one area leads into the next so that changes in space also change the player's expectations.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Environmental Storytelling</h4>
+                <h4>Atmosphere &amp; lighting</h4>
                 <p class="bio-text">
-                    I used props to hint at the bunker's history: overturned chairs, scattered papers, broken equipment, and blood trails. These details invite players to imagine what happened before they arrived.
+                    I used contrast between cold industrial light and darker areas to shape the mood. Selective lighting gives players enough information to navigate while preserving a sense of uncertainty.
                 </p>
                 <p class="bio-text">
-                    Areas such as the flooded room and laboratory add mystery and dread without relying on exposition. Fog and floating dust give the spaces more depth, making flashlight beams more prominent and helping the bunker feel immersive.
+                    Testing the lighting from the player's perspective helped me tune brightness and shadows so the bunker felt atmospheric without making the route impossible to read. Light became part of the navigation language: it could draw attention to a space, while darkness kept parts of the environment unknown.
                 </p>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Structural Detail & Asset Placement</h4>
+                <h4>Environmental storytelling</h4>
                 <p class="bio-text">
-                    Pipes, vents, cables, and broken panels help the bunker feel functional yet decayed. I carefully calibrated the scale and spacing of assets to create a sense of claustrophobia without obstructing navigation.
+                    I wanted the bunker to feel like a place built for a purpose, rather than a set of empty corridors. Modular walls, storage, and environmental details establish that practical foundation.
                 </p>
                 <p class="bio-text">
-                    These smaller details work alongside the lighting, fog, and dust to make the bunker feel lived-in, but unsafe.
+                    The route and its changing spaces then leave room for players to wonder what happened there. This lets the environment suggest a story without stopping exploration for exposition; players can interpret the space at their own pace.
+                </p>
+
+                <h4>Structure &amp; set dressing</h4>
+                <p class="bio-text">
+                    Repeated wall panels create a consistent industrial structure, while props and storage add variation to individual rooms. I kept their scale and placement in balance with the paths players need to navigate.
+                </p>
+                <p class="bio-text">
+                    I treated these details as part of the level design, not decoration added at the end: they help establish scale and give rooms distinct identities. The result is a space that feels functional but unsettling.
                 </p>
             </div>
 
             <!-- Development -->
             <div class="cv-section">
-                <h3 style="color: rgba(23, 23, 21, 0.9); font-size: 20px; margin: 20px 0 10px 0;">Development</h3>
+                <h3>Development</h3>
                 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Process</h4>
+                <h4>From route plan to blockout</h4>
                 <p class="bio-text">
-                    I began with layout sketches to map the level's structure and player flow. I then built graybox blockouts in Unreal using simple geometry, which let me test navigation and scale before adding detail.
+                    I first mapped the route and explored different ways the rooms could connect. Once the layout felt promising on paper, I moved it into Unreal as a blockout. Testing the rooms in 3D helped me judge their scale, sightlines, and connections before spending time on detail.
                 </p>
                 <p class="bio-text">
-                    Repeated playtests revealed that the lighting looked very different in gameplay than it did in the editor. I used what I learned from those tests to rework shadow placement and brightness levels.
+                    These early room studies let me compare spaces and adjust them from the player's point of view. I then used lighting and environmental detail to carry the bunker from a navigable blockout toward a more unsettling place.
                 </p>
+                <div class="project-gallery" aria-label="Sublevel environment blockout">
+                    <figure>
+                        <img src="Images/Sublevel/sublevel-blockout-studies.png" alt="A montage of early Unreal Engine room and prop blockout studies for Sublevel" loading="lazy">
+                        <figcaption>Early Unreal studies let me compare room scale and prop placement before settling on the final atmosphere.</figcaption>
+                    </figure>
+                </div>
 
-                <h4 style="color: rgba(23, 23, 21, 0.85); font-size: 16px; margin: 15px 0 8px 0; font-weight: 500;">Key Learnings</h4>
-                <p class="bio-text">
-                    <strong>Pacing through space can matter more than mechanics.</strong> Alternating tight and open areas, adding loops and branching paths, and using subtle lighting changes can create tension without adding more game systems.
-                </p>
-                <p class="bio-text">
-                    <strong>Graybox blockouts reveal problems early.</strong> Testing navigation and scale with simple geometry before adding detail saves time and helps prevent major redesigns.
-                </p>
-                <p class="bio-text">
-                    <strong>Playtesting from the player's perspective is essential.</strong> A level can feel very different in gameplay than it does in the editor. I had to rework the lighting twice after testing it in-game.
-                </p>
-                <p class="bio-text">
-                    <strong>Environmental storytelling is powerful.</strong> Props and spatial design can tell a story without dialogue. When players fill in the gaps themselves, the horror can feel more personal.
-                </p>
-                <p class="bio-text">
-                    <strong>Lighting is a level design tool, not just decoration.</strong> Light direction, color, and flicker patterns can guide players and shape how they feel.
-                </p>
+                <h4>What I learned</h4>
+                <ul class="project-learning-list">
+                    <li><strong>Pacing can come from the space</strong><span>Alternating tight and open areas, branches, and loops can build tension without adding more game systems.</span></li>
+                    <li><strong>Blockouts reveal problems early</strong><span>Testing navigation and scale with simple geometry makes it easier to revise the layout before adding detail.</span></li>
+                    <li><strong>Test from the player's perspective</strong><span>A level can feel very different in gameplay than in the editor. In-game testing helped me adjust lighting and shadows to suit the actual view.</span></li>
+                    <li><strong>Let the environment tell part of the story</strong><span>Props and spatial design can suggest what happened without dialogue, leaving players room to interpret the bunker.</span></li>
+                    <li><strong>Lighting is a design tool</strong><span>Light direction, color, and contrast can guide attention and shape how a space feels, not just decorate it.</span></li>
+                </ul>
             </div>
         </div>
     </div>
