@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f1f0ec">
     <title>Project Splitstar - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261013-6">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-12">
+    <script src="javaScript/theme.js?v=20261013-1"></script>
 </head>
-<body class="project-page project-page--splitstar">
+<body class="project-page">
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-inner">
@@ -16,6 +18,9 @@
                 <a href="aboutme.html" class="nav-link">About</a>
                 <a href="mailto:fischoenmakers@gmail.com" class="nav-link">Contact</a>
             </div>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
+                <span data-theme-icon aria-hidden="true">☾</span>
+            </button>
         </div>
     </nav>
 
@@ -28,10 +33,16 @@
             <p class="project-type">Room-based shooter · Level design · Visual effects &amp; UI</p>
             
             <div style="margin: 30px 0;">
-                <video width="100%" height="auto" controls style="border-radius: 10px; background: #000;">
+                <video width="100%" height="auto" controls preload="metadata" poster="Images/ProjectSplitstar.png" aria-label="Project Splitstar gameplay trailer" style="border-radius: 10px; background: #000;">
                     <source src="Videos/Project Splitstar Trailer.mp4" type="video/mp4">
                 </video>
             </div>
+
+            <dl class="project-details" aria-label="Project details">
+                <div><dt>Contribution</dt><dd>Level design, environment, visual effects, UI</dd></div>
+                <div><dt>Format</dt><dd>2.5D room-based shooter</dd></div>
+                <div><dt>Engine</dt><dd>Unreal Engine 5.6</dd></div>
+            </dl>
 
             <!-- Overview -->
             <div class="cv-section">
