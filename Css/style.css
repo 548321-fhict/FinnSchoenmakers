@@ -781,9 +781,9 @@ main,
 }
 
 .footer-bottom {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
     padding-top: 22px;
     border-top: 1px solid var(--line);
@@ -791,8 +791,23 @@ main,
     font-size: 11px;
 }
 
+.footer-bottom > :first-child {
+    justify-self: start;
+}
+
+.footer-bottom .footer-links {
+    justify-self: center;
+}
+
+.footer-bottom > .back-to-top {
+    justify-self: end;
+}
+
 .footer-links {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 22px;
 }
 
@@ -898,9 +913,12 @@ main,
 .legal-card .cv-section > p,
 .legal-card .cv-section > ul {
     max-width: 76ch;
+    margin-right: auto;
+    margin-left: auto;
     color: var(--copy);
     font-size: 15px;
     line-height: 1.8;
+    text-align: center;
 }
 
 .legal-card .cv-section > ul {
@@ -1309,6 +1327,8 @@ footer.footer--simple .footer-separator {
     }
 
     .footer-bottom {
+        display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 
