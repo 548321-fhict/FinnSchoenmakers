@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f1f0ec">
     <title>Project Splitstar - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261013-13">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-15">
     <script src="javaScript/theme.js?v=20261013-1"></script>
 </head>
 <body class="project-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-inner">
             <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
             <div class="nav-container">
@@ -25,7 +26,7 @@
     </nav>
 
     <!-- Main Container -->
-    <div class="main-container">
+    <main class="main-container" id="main-content">
         <div class="bio-card" style="flex: 1;">
             <a href="index.html" class="back-link">← Back to Home</a>
             
@@ -46,7 +47,7 @@
 
             <!-- Overview -->
             <div class="cv-section">
-                <h3>Overview</h3>
+                <h2>Overview</h2>
                 <p class="bio-text">
                     Splitstar is a combat-focused 2.5D shooter where players fight through a sequence of rooms. I worked on the level design, visual effects, and user interface, shaping the route so each space builds on the movement and combat introduced before it.
                 </p>
@@ -67,9 +68,9 @@
 
             <!-- Features -->
             <div class="cv-section">
-                <h3>Design &amp; gameplay</h3>
+                <h2>Design &amp; gameplay</h2>
                 
-                <h4>Spatial design &amp; player flow</h4>
+                <h3>Spatial design &amp; player flow</h3>
                 <p class="bio-text">
                     I divided the level into rooms with distinct gameplay purposes. Their layouts and obstacles help players understand where they can move, keeping attention on the encounter rather than on finding a route.
                 </p>
@@ -77,7 +78,7 @@
                     Room size and shape control the pace. Tighter spaces create pressure, while more open arenas reward positioning and awareness. Across the level, the layout stays readable while asking players to keep moving. This variety helps each encounter feel like a new step in the journey rather than another version of the same room.
                 </p>
 
-                <h4>Room-by-room progression</h4>
+                <h3>Room-by-room progression</h3>
                 <p class="bio-text">Each room has a distinct role in the progression, building from the introduction of the core mechanics to a final test of the player's skills. I used this sequence to introduce challenges in stages, then combine them in later encounters.</p>
                 <ul class="project-list">
                     <li><strong>Introduction:</strong> teaches the core mechanics and basic combat.</li>
@@ -97,7 +98,7 @@
                     </figure>
                 </div>
 
-                <h4>Environment &amp; readability</h4>
+                <h3>Environment &amp; readability</h3>
                 <p class="bio-text">
                     I designed the environment to make gameplay clear while maintaining a consistent visual style. Walls, floors, and obstacles define movement space and interaction areas. Careful spacing and alignment help prevent visual clutter during combat.
                 </p>
@@ -105,7 +106,7 @@
                     Curved wall elements make the rooms feel less artificial. I also enclosed the level to maintain immersion and hide the world beyond the playable area. Repeating the industrial materials across different spaces ties the sequence together, while room layouts and lighting help distinguish one encounter from the next.
                 </p>
 
-                <h4>Weapon feedback</h4>
+                <h3>Weapon feedback</h3>
                 <p class="bio-text">
                     I designed the weapon effects to make combat feel responsive. The muzzle flash gives players immediate visual confirmation when they fire, helping connect an input to what happens on screen.
                 </p>
@@ -116,7 +117,7 @@
                     </figure>
                 </div>
 
-                <h4>Layered explosion effect</h4>
+                <h3>Layered explosion effect</h3>
                 <p class="bio-text">
                     I built the explosion in layers, combining sparks, smoke, fire, and a flash of light so the impact reads clearly against the dark environment.
                 </p>
@@ -130,7 +131,7 @@
                     </figure>
                 </div>
 
-                <h4>HUD structure</h4>
+                <h3>HUD structure</h3>
                 <p class="bio-text">
                     I divided the HUD into two parts to keep information organized. The player-focused section displays health, ability cooldowns, and active power-ups. These details stay readable at a glance so players can make quick decisions during combat.
                 </p>
@@ -142,9 +143,9 @@
 
             <!-- Development -->
             <div class="cv-section">
-                <h3>Development</h3>
+                <h2>Development</h2>
                 
-                <h4>Planning, testing &amp; iteration</h4>
+                <h3>Planning, testing &amp; iteration</h3>
                 <p class="bio-text">
                     I started by mapping out the level in Figma, then built greybox blockouts in Unreal Engine to test navigation, scale, and movement. This gave me a chance to check the level's basic flow before committing to detailed environments.
                 </p>
@@ -152,7 +153,7 @@
                     During playtests, I checked whether the layout felt clear and intuitive, and whether the movement spaces supported the intended encounters. I then refined the level by adding elevation, increasing the challenge in key areas, and introducing paths that asked players to weigh risk against reward.
                 </p>
 
-                <h4>What I learned</h4>
+                <h3>What I learned</h3>
                 <ul class="project-learning-list">
                     <li><strong>Progression sustains engagement</strong><span>Varying rooms and encounters can raise the challenge gradually without overwhelming the player.</span></li>
                     <li><strong>Blockouts support fast iteration</strong><span>Testing navigation and scale early makes layout changes easier before detailed environments are built.</span></li>
@@ -162,7 +163,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer footer--simple">
@@ -171,8 +172,13 @@
             <div class="footer-links">
                 <a href="mailto:fischoenmakers@gmail.com" class="footer-link">Email</a>
                 <span class="footer-separator">•</span>
-                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
+            <nav class="legal-links" aria-label="Legal information">
+                <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+                <a class="footer-link" href="cookie-policy.html">Cookie policy</a>
+                <a class="footer-link" href="terms-and-conditions.html">Terms and conditions</a>
+            </nav>
         </div>
     </footer>
 </body>

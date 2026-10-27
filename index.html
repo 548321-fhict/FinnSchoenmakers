@@ -6,12 +6,12 @@
     <meta name="theme-color" content="#f1f0ec">
     <meta name="description" content="Finn Schoenmakers is a game designer and 3D artist building worlds that tell stories.">
     <title>Finn Schoenmakers | Game Designer &amp; 3D Artist</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261013-13">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-15">
     <script src="javaScript/theme.js?v=20261013-1"></script>
-    <script src="javaScript/rock-video.js?v=20261013-1" defer></script>
     <script src="javaScript/side-quests.js?v=20261012-1" defer></script>
 </head>
 <body class="home-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header" id="top">
         <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
         <nav class="nav-container" aria-label="Main navigation">
@@ -24,12 +24,8 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero" aria-labelledby="hero-title">
-            <video class="hero-video" autoplay muted loop playsinline aria-label="Floating rock video">
-                <source src="Videos/0001-0440.mp4" type="video/mp4">
-            </video>
-            <canvas class="hero-video-canvas" aria-hidden="true"></canvas>
             <p class="hero-kicker">Game designer · 3D artist · Level designer</p>
             <h1 id="hero-title">I build worlds<br>that <span>tell sto<span>r</span><span class="hero-story-kerning">i</span>es.</span></h1>
             <div class="hero-bottom">
@@ -92,17 +88,14 @@
                     <p class="eyebrow">Beyond the main mission</p>
                     <h2 id="side-quests-title">Side quests</h2>
                 </div>
-                <p class="section-aside">The sketches, experiments, and happy accidents<br>that I make along the way.</p>
+                <p class="section-aside">Small creative projects and ideas from along the way.</p>
             </div>
             <div class="quest-list">
-                <button class="quest-item" type="button" data-gallery="experiments" aria-expanded="false" aria-controls="quest-gallery-panel">
-                    <span class="quest-index">A</span><span>Experiments</span><span class="quest-mark" aria-hidden="true">✳</span>
-                </button>
                 <button class="quest-item" type="button" data-gallery="art" aria-expanded="false" aria-controls="quest-gallery-panel">
-                    <span class="quest-index">B</span><span>3D art</span><span class="quest-mark" aria-hidden="true">◌</span>
+                    <span class="quest-index">A</span><span>3D art</span><span class="quest-mark" aria-hidden="true">◌</span>
                 </button>
                 <button class="quest-item" type="button" data-gallery="prototypes" aria-expanded="false" aria-controls="quest-gallery-panel">
-                    <span class="quest-index">C</span><span>Prototypes</span><span class="quest-mark" aria-hidden="true">↗</span>
+                    <span class="quest-index">B</span><span>Prototypes</span><span class="quest-mark" aria-hidden="true">↗</span>
                 </button>
             </div>
             <section class="quest-gallery-panel" id="quest-gallery-panel" aria-labelledby="quest-gallery-title" aria-hidden="true" inert>
@@ -138,40 +131,33 @@
         </section>
     </main>
 
-    <template id="gallery-experiments">
-        <figure class="quest-gallery-item quest-gallery-item--video">
-            <video controls preload="metadata">
-                <source src="Videos/0001-0440.mp4" type="video/mp4">
-            </video>
+    <template id="gallery-art">
+        <figure class="quest-gallery-item">
+            <img src="Images/FloatingRock.png" alt="Floating rock covered in grass and vegetation" loading="lazy" decoding="async">
             <figcaption>Floating rock study</figcaption>
         </figure>
         <figure class="quest-gallery-item">
-            <img src="Images/FoggyForest.jpg" alt="Fog-covered forest environment study" loading="lazy">
-            <figcaption>Foggy forest</figcaption>
-        </figure>
-    </template>
-
-    <template id="gallery-art">
-        <figure class="quest-gallery-item">
-            <img src="Images/SublevelMainMenu.png" alt="Sublevel environment artwork" loading="lazy">
-            <figcaption>Sublevel environment</figcaption>
+            <img src="Images/3d-art/sword-in-the-stone.png" alt="A glowing sword embedded in a stone pedestal" loading="lazy" decoding="async">
+            <figcaption>Sword in the stone</figcaption>
         </figure>
         <figure class="quest-gallery-item">
-            <img src="Images/FoggyForest.jpg" alt="Fog-covered forest environment artwork" loading="lazy">
-            <figcaption>Forest environment</figcaption>
+            <img src="Images/3d-art/low-poly-crystal.png" alt="A low-poly blue and pink crystal model" loading="lazy" decoding="async">
+            <figcaption>Low-poly crystal study</figcaption>
+        </figure>
+        <figure class="quest-gallery-item">
+            <img src="Images/3d-art/low-poly-workbench.png" alt="A low-poly workbench and stool modeled in 3D" loading="lazy" decoding="async">
+            <figcaption>Low-poly workbench</figcaption>
+        </figure>
+        <figure class="quest-gallery-item">
+            <img src="Images/3d-art/water-ripple-study.png" alt="A 3D water surface with concentric ripples and droplets" loading="lazy" decoding="async">
+            <figcaption>Water ripple study</figcaption>
         </figure>
     </template>
 
     <template id="gallery-prototypes">
-        <figure class="quest-gallery-item quest-gallery-item--video">
-            <video controls preload="metadata" poster="Images/Targetshooter.png">
-                <source src="Videos/Aim%20minigame.mp4" type="video/mp4">
-            </video>
-            <figcaption>Target Shooter prototype</figcaption>
-        </figure>
         <figure class="quest-gallery-item">
-            <img src="Images/Targetshooter.png" alt="Target Shooter prototype artwork" loading="lazy">
-            <figcaption>Target Shooter</figcaption>
+            <img src="Images/Targetshooter.gif" alt="Animated gameplay from the Target Shooter prototype" loading="lazy" decoding="async">
+            <figcaption>Target Shooter gameplay</figcaption>
         </figure>
     </template>
 
@@ -188,6 +174,11 @@
                 </div>
                 <a class="footer-link back-to-top" href="#top">Back to top ↑</a>
             </div>
+            <nav class="legal-links" aria-label="Legal information">
+                <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+                <a class="footer-link" href="cookie-policy.html">Cookie policy</a>
+                <a class="footer-link" href="terms-and-conditions.html">Terms and conditions</a>
+            </nav>
         </div>
     </footer>
 </body>

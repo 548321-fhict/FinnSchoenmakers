@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finn Schoenmakers - CV</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 14mm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: #20231f;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 9.5pt;
+            line-height: 1.45;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+        }
+
+        .cv-header {
+            padding-bottom: 12pt;
+            border-bottom: 2px solid #58694b;
+        }
+
+        h1 {
+            font-size: 27pt;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        .role {
+            margin-top: 5pt;
+            color: #58694b;
+            font-size: 12pt;
+            font-weight: 650;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3pt 14pt;
+            margin-top: 9pt;
+            color: #484d45;
+            font-size: 8.5pt;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            gap: 22pt;
+            padding-top: 16pt;
+        }
+
+        section + section {
+            margin-top: 16pt;
+        }
+
+        h2 {
+            margin-bottom: 7pt;
+            color: #58694b;
+            font-size: 11pt;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .profile {
+            font-size: 10pt;
+            line-height: 1.55;
+        }
+
+        .entry + .entry {
+            margin-top: 11pt;
+        }
+
+        h3 {
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+
+        .meta {
+            margin-top: 1pt;
+            color: #58694b;
+            font-size: 8.5pt;
+            font-weight: 600;
+        }
+
+        .entry p:not(.meta) {
+            margin-top: 3pt;
+            color: #373b35;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 14pt;
+        }
+
+        li + li {
+            margin-top: 4pt;
+        }
+
+        .skills {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            padding: 4pt 0;
+            border-bottom: 1px solid #d9ddd5;
+        }
+
+        .note {
+            margin-top: 8pt;
+            color: #484d45;
+            font-size: 8.5pt;
+        }
+    </style>
+</head>
+<body>
+    <header class="cv-header">
+        <h1>Finn Schoenmakers</h1>
+        <p class="role">Game Design Student · Level Design · 3D Art</p>
+        <div class="contact">
+            <span>Venlo, Netherlands</span>
+            <a href="mailto:fischoenmakers@gmail.com">fischoenmakers@gmail.com</a>
+            <a href="https://finnschoenmakers-gamedesign.com">finnschoenmakers-gamedesign.com</a>
+            <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269">LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="layout">
+        <div>
+            <section>
+                <h2>Profile</h2>
+                <p class="profile">Game Design student at Fontys University of Applied Sciences, focused on level design, 3D art, and environment creation. I develop ideas into playable spaces through route planning, blockouts, and iteration, with an interest in making clear and memorable experiences for players.</p>
+            </section>
+
+            <section>
+                <h2>Selected projects</h2>
+                <article class="entry">
+                    <h3>Sublevel</h3>
+                    <p class="meta">Team game · Level design, environment blockout, and lighting</p>
+                    <p>Planned a connected bunker route and developed it through in-engine blockouts, testing scale, atmosphere, and player navigation.</p>
+                </article>
+                <article class="entry">
+                    <h3>Project Splitstar</h3>
+                    <p class="meta">Team game · Level design, environment, visual effects, and UI</p>
+                    <p>Designed room progression for a 2.5D shooter, shaping encounters around movement, readability, and combat flow.</p>
+                </article>
+                <article class="entry">
+                    <h3>Target Shooter</h3>
+                    <p class="meta">One-week prototype · Gameplay and rapid iteration</p>
+                    <p>Built the shooting mechanic and target behavior, refining immediate hit feedback and a focused aim-training loop.</p>
+                </article>
+            </section>
+        </div>
+
+        <aside>
+            <section>
+                <h2>Skills and tools</h2>
+                <ul class="skills">
+                    <li>Level design</li>
+                    <li>Unreal Engine 5.6</li>
+                    <li>Environment blockout and lighting</li>
+                    <li>Visual effects and UI</li>
+                    <li>3D art</li>
+                    <li>Blender</li>
+                    <li>Gameplay prototyping</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Work experience</h2>
+                <article class="entry">
+                    <h3>Climbing Instructor &amp; Rescue Team Member</h3>
+                    <p class="meta">Fun Forest Venlo · Current</p>
+                    <p>Work as a climbing instructor and as part of the rescue team.</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <article class="entry">
+                    <h3>Fontys University of Applied Sciences</h3>
+                    <p class="meta">ICT · Specialisation in Game Design · 2024–2028 (expected)</p>
+                </article>
+            </section>
+        </aside>
+    </div>
+</body>
+</html>

@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f1f0ec">
     <title>Sublevel - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261013-13">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-15">
     <script src="javaScript/theme.js?v=20261013-1"></script>
 </head>
 <body class="project-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-inner">
             <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
             <div class="nav-container">
@@ -25,7 +26,7 @@
     </nav>
 
     <!-- Main Container -->
-    <div class="main-container">
+    <main class="main-container" id="main-content">
         <div class="bio-card" style="flex: 1;">
             <a href="index.html" class="back-link">← Back to Home</a>
             
@@ -46,7 +47,7 @@
 
             <!-- Overview -->
             <div class="cv-section">
-                <h3>Overview</h3>
+                <h2>Overview</h2>
                 <p class="bio-text">
                     Sublevel is a horror exploration game set in an abandoned underground bunker. I designed the level around a simple question: how can the space make players curious about what lies around the next corner? Rather than relying on constant prompts, I used a connected route of rooms and corridors to give exploration its own momentum.
                 </p>
@@ -67,9 +68,9 @@
 
             <!-- Features -->
             <div class="cv-section">
-                <h3>Design approach</h3>
+                <h2>Design approach</h2>
                 
-                <h4>Spatial design &amp; player flow</h4>
+                <h3>Spatial design &amp; player flow</h3>
                 <p class="bio-text">
                     I used connected corridors, rooms, branches, and loops to make the bunker feel larger and less predictable. The route gives players reasons to explore while keeping the next part of the journey discoverable.
                 </p>
@@ -77,7 +78,7 @@
                     The layout shifts between tight passages and more open spaces. That contrast controls the pace: a brief release from confinement makes the next narrow passage feel more intense. I considered how one area leads into the next so that changes in space also change the player's expectations.
                 </p>
 
-                <h4>Atmosphere &amp; lighting</h4>
+                <h3>Atmosphere &amp; lighting</h3>
                 <p class="bio-text">
                     I used contrast between cold industrial light and darker areas to shape the mood. Selective lighting gives players enough information to navigate while preserving a sense of uncertainty.
                 </p>
@@ -85,7 +86,7 @@
                     Testing the lighting from the player's perspective helped me tune brightness and shadows so the bunker felt atmospheric without making the route impossible to read. Light became part of the navigation language: it could draw attention to a space, while darkness kept parts of the environment unknown.
                 </p>
 
-                <h4>Environmental storytelling</h4>
+                <h3>Environmental storytelling</h3>
                 <p class="bio-text">
                     I wanted the bunker to feel like a place built for a purpose, rather than a set of empty corridors. Modular walls, storage, and environmental details establish that practical foundation.
                 </p>
@@ -93,7 +94,7 @@
                     The route and its changing spaces then leave room for players to wonder what happened there. This lets the environment suggest a story without stopping exploration for exposition; players can interpret the space at their own pace.
                 </p>
 
-                <h4>Structure &amp; set dressing</h4>
+                <h3>Structure &amp; set dressing</h3>
                 <p class="bio-text">
                     Repeated wall panels create a consistent industrial structure, while props and storage add variation to individual rooms. I kept their scale and placement in balance with the paths players need to navigate.
                 </p>
@@ -104,9 +105,9 @@
 
             <!-- Development -->
             <div class="cv-section">
-                <h3>Development</h3>
+                <h2>Development</h2>
                 
-                <h4>From route plan to blockout</h4>
+                <h3>From route plan to blockout</h3>
                 <p class="bio-text">
                     I first mapped the route and explored different ways the rooms could connect. Once the layout felt promising on paper, I moved it into Unreal as a blockout. Testing the rooms in 3D helped me judge their scale, sightlines, and connections before spending time on detail.
                 </p>
@@ -120,7 +121,7 @@
                     </figure>
                 </div>
 
-                <h4>What I learned</h4>
+                <h3>What I learned</h3>
                 <ul class="project-learning-list">
                     <li><strong>Pacing can come from the space</strong><span>Alternating tight and open areas, branches, and loops can build tension without adding more game systems.</span></li>
                     <li><strong>Blockouts reveal problems early</strong><span>Testing navigation and scale with simple geometry makes it easier to revise the layout before adding detail.</span></li>
@@ -130,7 +131,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer footer--simple">
@@ -139,8 +140,13 @@
             <div class="footer-links">
                 <a href="mailto:fischoenmakers@gmail.com" class="footer-link">Email</a>
                 <span class="footer-separator">•</span>
-                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
+            <nav class="legal-links" aria-label="Legal information">
+                <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+                <a class="footer-link" href="cookie-policy.html">Cookie policy</a>
+                <a class="footer-link" href="terms-and-conditions.html">Terms and conditions</a>
+            </nav>
         </div>
     </footer>
 </body>

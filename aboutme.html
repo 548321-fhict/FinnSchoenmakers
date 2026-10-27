@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f1f0ec">
     <title>About Me | Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261013-13">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-15">
     <script src="javaScript/theme.js?v=20261013-1"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-inner">
             <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
             <div class="nav-container">
@@ -25,7 +26,7 @@
     </nav>
 
     <!-- Main Container -->
-    <div class="main-container">
+    <main class="main-container" id="main-content">
         <div class="bio-card" style="flex: 1;">
             <h1 class="project-title">About me</h1>
             <p class="project-type">Game design student · Creative development · Digital experiences</p>
@@ -42,11 +43,11 @@
                 <p class="bio-text">Outside of my studies, I enjoy bouldering and spending time outdoors, especially in the mountains. I also work at Fun Forest Venlo as a climbing instructor and as part of the rescue team, where I enjoy helping people take on new challenges.</p>
 
                 <p class="bio-text">
-                    <a href="Files/CV FS.pdf" class="cv-link" target="_blank">Download my CV</a>
+                    <a href="Files/CV FS.pdf" class="cv-link" target="_blank" rel="noopener noreferrer">Download my CV</a>
                 </p>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer footer--simple">
@@ -55,8 +56,13 @@
             <div class="footer-links">
                 <a href="mailto:fischoenmakers@gmail.com" class="footer-link">Email</a>
                 <span class="footer-separator">•</span>
-                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
+            <nav class="legal-links" aria-label="Legal information">
+                <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+                <a class="footer-link" href="cookie-policy.html">Cookie policy</a>
+                <a class="footer-link" href="terms-and-conditions.html">Terms and conditions</a>
+            </nav>
         </div>
     </footer>
 </body>

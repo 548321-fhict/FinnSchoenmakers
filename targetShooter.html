@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f1f0ec">
     <title>Target Shooter - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261013-13">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-15">
     <script src="javaScript/theme.js?v=20261013-1"></script>
 </head>
 <body class="project-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-inner">
             <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
             <div class="nav-container">
@@ -25,7 +26,7 @@
     </nav>
 
      <!-- Main Container -->
-    <div class="main-container">
+    <main class="main-container" id="main-content">
         <div class="bio-card" style="flex: 1;">
             <a href="index.html" class="back-link">← Back to Home</a>
             
@@ -44,7 +45,7 @@
             </dl>
     <!-- Overview -->
             <div class="cv-section">
-                <h3>Overview</h3>
+                <h2>Overview</h2>
                 <p class="bio-text">
                     Target Shooter is a fast-paced aim-training game I developed in one week. With such a short timeframe, I focused on what makes shooting feel good instead of trying to build a large or complex game.
                 </p>
@@ -55,9 +56,9 @@
 
             <!-- Features -->
             <div class="cv-section">
-                <h3>Design &amp; gameplay</h3>
+                <h2>Design &amp; gameplay</h2>
                 
-                <h4>Responsive shooting</h4>
+                <h3>Responsive shooting</h3>
                 <p class="bio-text">
                     The shooting system is built around immediate feedback. When the player fires, a raycast registers the shot at once, making the controls feel fast and precise.
                 </p>
@@ -65,7 +66,7 @@
                     Targets react as soon as they are hit, reinforcing the connection between the player's input and the result. This direct response is central to making the shooting feel satisfying, so I kept the interaction immediate rather than adding delays or extra steps.
                 </p>
 
-                <h4>Feedback &amp; clarity</h4>
+                <h3>Feedback &amp; clarity</h3>
                 <p class="bio-text">
                     Clear feedback was central to the experience. A distinct sound confirms each successful shot, and targets disappear on impact. Their presentation also makes them easy to track.
                 </p>
@@ -73,7 +74,7 @@
                     These signals make a successful hit easy to understand and more rewarding. Moving targets add challenge and variety while keeping the same simple shooting mechanic at the heart of the experience.
                 </p>
 
-                <h4>Reference-based design</h4>
+                <h3>Reference-based design</h3>
                 <p class="bio-text">
                     I took inspiration from aim trainers such as KovaaK's FPS Aim Trainer, especially their emphasis on responsiveness and feedback. I applied those fundamentals through instant shots, clear audio confirmation, and simple, readable targets.
                 </p>
@@ -84,9 +85,9 @@
 
             <!-- Development -->
             <div class="cv-section">
-                <h3>Development</h3>
+                <h2>Development</h2>
                 
-                <h4>Building the core mechanic</h4>
+                <h3>Building the core mechanic</h3>
                 <p class="bio-text">
                     I began by recreating a simple shooting system to understand how it worked. I used a raycast to detect hits instantly, matching the responsiveness I wanted from an aim trainer.
                 </p>
@@ -94,7 +95,7 @@
                     I then added basic feedback, including hit sounds and target reactions. Testing these elements early helped me judge whether the central action felt right before building more systems around it.
                 </p>
 
-                <h4>Rapid prototyping &amp; iteration</h4>
+                <h3>Rapid prototyping &amp; iteration</h3>
                 <p class="bio-text">
                     Because the project had a short timeframe, I tested ideas quickly rather than spending too long planning. I prototyped target spawning, movement, and shooting interactions, then adjusted or removed anything that didn't feel right.
                 </p>
@@ -102,7 +103,7 @@
                     I also tuned details such as fire rate, spawn timing, and target speed. Changing these values affected both the difficulty and rhythm, so I tested them together to create a more balanced experience.
                 </p>
 
-                <h4>Focus on the core over complexity</h4>
+                <h3>Focus on the core over complexity</h3>
                 <p class="bio-text">
                     I kept the visuals minimal early on so I could focus on how the shooting felt. Once the mechanics were working well, I refined the presentation.
                 </p>
@@ -110,7 +111,7 @@
                     This order kept development focused on what mattered most: making a simple mechanic feel as good as possible before adding polish. It also gave me a clear way to prioritize work within the one-week limit.
                 </p>
 
-                <h4>What I learned</h4>
+                <h3>What I learned</h3>
                 <ul class="project-learning-list">
                     <li><strong>Responsiveness is critical</strong><span>Even a small delay can make shooting feel sluggish. Immediate input and hit registration make the experience feel precise and satisfying.</span></li>
                     <li><strong>Feedback drives satisfaction</strong><span>Sound and visual reactions reinforce successful actions. Each hit needs a clear, immediate confirmation.</span></li>
@@ -120,7 +121,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer footer--simple">
@@ -129,8 +130,13 @@
             <div class="footer-links">
                 <a href="mailto:fischoenmakers@gmail.com" class="footer-link">Email</a>
                 <span class="footer-separator">•</span>
-                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
+            <nav class="legal-links" aria-label="Legal information">
+                <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
+                <a class="footer-link" href="cookie-policy.html">Cookie policy</a>
+                <a class="footer-link" href="terms-and-conditions.html">Terms and conditions</a>
+            </nav>
         </div>
     </footer>
 </body>
