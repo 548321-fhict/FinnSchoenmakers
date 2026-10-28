@@ -72,7 +72,7 @@ function closeGallery() {
 function setTriggerExpanded(trigger, expanded) {
     trigger.setAttribute('aria-expanded', String(expanded));
     trigger.querySelector('.quest-action').textContent = expanded ? 'Close gallery' : 'View gallery';
-    trigger.querySelector('.quest-mark').textContent = expanded ? '×' : '↗';
+    trigger.querySelector('.quest-mark').textContent = expanded ? '×' : '↗︎';
 }
 
 questGalleryClose.addEventListener('click', closeGallery);
