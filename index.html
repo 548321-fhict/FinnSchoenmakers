@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f1f0ec">
     <meta name="description" content="Finn Schoenmakers is a game designer and 3D artist building worlds that tell stories.">
     <title>Finn Schoenmakers | Game Designer &amp; 3D Artist</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261013-16">
+    <link rel="stylesheet" href="Css/style.css?v=20261013-17">
     <script src="javaScript/theme.js?v=20261013-1"></script>
     <script src="javaScript/side-quests.js?v=20261012-1" defer></script>
 </head>
@@ -92,10 +92,10 @@
             </div>
             <div class="quest-list">
                 <button class="quest-item" type="button" data-gallery="art" aria-expanded="false" aria-controls="quest-gallery-panel">
-                    <span class="quest-index">A</span><span>3D art</span><span class="quest-mark" aria-hidden="true">◌</span>
+                    <span class="quest-index">A</span><span class="quest-title">3D art</span><span class="quest-action">View gallery</span><span class="quest-mark" aria-hidden="true">↗</span>
                 </button>
                 <button class="quest-item" type="button" data-gallery="prototypes" aria-expanded="false" aria-controls="quest-gallery-panel">
-                    <span class="quest-index">B</span><span>Prototypes</span><span class="quest-mark" aria-hidden="true">↗</span>
+                    <span class="quest-index">B</span><span class="quest-title">Prototypes</span><span class="quest-action">View gallery</span><span class="quest-mark" aria-hidden="true">↗</span>
                 </button>
             </div>
             <section class="quest-gallery-panel" id="quest-gallery-panel" aria-labelledby="quest-gallery-title" aria-hidden="true" inert>
@@ -110,7 +110,7 @@
                     <div class="quest-gallery" id="quest-gallery-content"></div>
                 </div>
             </section>
-            <p class="quest-footnote">Currently making strange little things in Blender and Unreal.</p>
+            <p class="quest-footnote">Currently making things in Blender and Unreal.</p>
         </section>
 
         <section class="about-section section-shell" id="about" aria-labelledby="about-title">
@@ -137,29 +137,18 @@
             <img src="Images/FloatingRock.png" alt="Floating rock covered in grass and vegetation" loading="lazy" decoding="async">
             <figcaption>Floating rock</figcaption>
         </figure>
-        <figure class="quest-gallery-item">
+        <figure class="quest-gallery-item quest-gallery-item--portrait">
             <img src="Images/3d-art/sword-in-the-stone.png" alt="A glowing sword embedded in a stone pedestal" loading="lazy" decoding="async">
             <figcaption>Sword in the stone</figcaption>
         </figure>
         <figure class="quest-gallery-item">
-            <img src="Images/3d-art/low-poly-crystal.png" alt="A low-poly blue and pink crystal model" loading="lazy" decoding="async">
-            <figcaption>Low-poly crystal</figcaption>
-        </figure>
-        <figure class="quest-gallery-item">
-            <img src="Images/3d-art/low-poly-workbench.png" alt="A low-poly workbench and stool modeled in 3D" loading="lazy" decoding="async">
-            <figcaption>Low-poly workbench</figcaption>
-        </figure>
-        <figure class="quest-gallery-item">
-            <img src="Images/3d-art/water-ripple-study.png" alt="A 3D water surface with concentric ripples and droplets" loading="lazy" decoding="async">
-            <figcaption>Water ripple</figcaption>
+            <img class="quest-gallery-image--landscape" src="Images/3d-art/planet-first-time.png" alt="A detailed green planet seen from orbit, with clouds and sunlight along the horizon" loading="lazy" decoding="async">
+            <figcaption>Planet environment</figcaption>
         </figure>
     </template>
 
     <template id="gallery-prototypes">
-        <figure class="quest-gallery-item">
-            <img src="Images/Targetshooter.gif" alt="Animated gameplay from the Target Shooter prototype" loading="lazy" decoding="async">
-            <figcaption>Target Shooter gameplay</figcaption>
-        </figure>
+        <p class="quest-gallery-empty">I'm currently working on new prototypes. Check back soon to see what I'm making.</p>
     </template>
 
     <footer class="footer" id="contact">

@@ -16,39 +16,63 @@ document.querySelectorAll('.quest-item[data-gallery]').forEach((trigger) => {
             return;
         }
 
-        const galleryName = trigger.dataset.gallery;
-        const template = document.querySelector(`#gallery-${galleryName}`);
-        if (!(template instanceof HTMLTemplateElement)) {
-            console.error(`Missing side quest gallery template: ${galleryName}`);
-            return;
-        }
-
-        const triggerTitle = trigger.querySelector('span:nth-child(2)');
-        if (!triggerTitle) {
-            console.error(`Side quest gallery trigger has no title: ${galleryName}`);
-            return;
-        }
-
-        activeTrigger?.setAttribute('aria-expanded', 'false');
-        activeTrigger = trigger;
-        trigger.setAttribute('aria-expanded', 'true');
-        questGalleryTitle.textContent = triggerTitle.textContent;
-        questGalleryContent.replaceChildren(template.content.cloneNode(true));
-        questGalleryPanel.inert = false;
-        questGalleryPanel.setAttribute('aria-hidden', 'false');
-        questGalleryPanel.classList.add('is-open');
-        requestAnimationFrame(() => questGalleryTitle.focus());
+        openGallery(trigger);
     });
 });
+
+function openGallery(trigger, focusHeading = true) {
+    const galleryName = trigger.dataset.gallery;
+    const template = document.querySelector(`#gallery-${galleryName}`);
+    if (!(template instanceof HTMLTemplateElement)) {
+        console.error(`Missing side quest gallery template: ${galleryName}`);
+        return;
+    }
+
+    const triggerTitle = trigger.querySelector('.quest-title');
+    const triggerAction = trigger.querySelector('.quest-action');
+    const triggerMark = trigger.querySelector('.quest-mark');
+    if (!triggerTitle || !triggerAction || !triggerMark) {
+        console.error(`Side quest gallery trigger has no title: ${galleryName}`);
+        return;
+    }
+
+    if (activeTrigger) {
+        setTriggerExpanded(activeTrigger, false);
+    }
+    activeTrigger = trigger;
+    setTriggerExpanded(trigger, true);
+    questGalleryTitle.textContent = triggerTitle.textContent;
+    questGalleryContent.replaceChildren(template.content.cloneNode(true));
+    questGalleryPanel.inert = false;
+    questGalleryPanel.setAttribute('aria-hidden', 'false');
+    questGalleryPanel.classList.add('is-open');
+    if (focusHeading) {
+        requestAnimationFrame(() => questGalleryTitle.focus());
+    }
+}
+
+const initialArtTrigger = document.querySelector('.quest-item[data-gallery="art"]');
+if (!(initialArtTrigger instanceof HTMLButtonElement)) {
+    throw new Error('The initial 3D art gallery button is missing from the page.');
+}
+openGallery(initialArtTrigger, false);
 
 function closeGallery() {
     questGalleryPanel.classList.remove('is-open');
     questGalleryPanel.inert = true;
     questGalleryPanel.setAttribute('aria-hidden', 'true');
     questGalleryContent.replaceChildren();
-    activeTrigger?.setAttribute('aria-expanded', 'false');
+    if (activeTrigger) {
+        setTriggerExpanded(activeTrigger, false);
+    }
     activeTrigger?.focus();
     activeTrigger = null;
+}
+
+function setTriggerExpanded(trigger, expanded) {
+    trigger.setAttribute('aria-expanded', String(expanded));
+    trigger.querySelector('.quest-action').textContent = expanded ? 'Close gallery' : 'View gallery';
+    trigger.querySelector('.quest-mark').textContent = expanded ? '×' : '↗';
 }
 
 questGalleryClose.addEventListener('click', closeGallery);
