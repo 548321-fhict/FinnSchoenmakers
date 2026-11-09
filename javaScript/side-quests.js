@@ -77,6 +77,27 @@ function setTriggerExpanded(trigger, expanded) {
 
 questGalleryClose.addEventListener('click', closeGallery);
 
+questGalleryContent.addEventListener('click', (event) => {
+    if (!(event.target instanceof Element)) {
+        return;
+    }
+
+    const detailButton = event.target.closest('.quest-gallery-item-button');
+    if (!(detailButton instanceof HTMLButtonElement)) {
+        return;
+    }
+
+    const detailId = detailButton.getAttribute('aria-controls');
+    const detail = detailId ? document.getElementById(detailId) : null;
+    if (!(detail instanceof HTMLParagraphElement)) {
+        throw new Error('A 3D art item is missing its description.');
+    }
+
+    const expanded = detailButton.getAttribute('aria-expanded') === 'true';
+    detailButton.setAttribute('aria-expanded', String(!expanded));
+    detail.hidden = expanded;
+});
+
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && activeTrigger) {
         closeGallery();

@@ -1,5 +1,6 @@
 const themeStorageKey = 'portfolio-theme';
 const themeMeta = document.querySelector('meta[name="theme-color"]');
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
 function applyTheme(theme) {
     document.documentElement.dataset.theme = theme;
@@ -17,7 +18,7 @@ function applyTheme(theme) {
     });
 }
 
-let savedTheme = 'light';
+let savedTheme = null;
 
 try {
     const storedTheme = localStorage.getItem(themeStorageKey);
@@ -28,8 +29,18 @@ try {
     console.warn('Could not read the saved theme preference.', error);
 }
 
-applyTheme(savedTheme);
-document.addEventListener('DOMContentLoaded', () => applyTheme(savedTheme));
+function getTheme() {
+    return savedTheme || (systemTheme.matches ? 'dark' : 'light');
+}
+
+applyTheme(getTheme());
+document.addEventListener('DOMContentLoaded', () => applyTheme(getTheme()));
+
+systemTheme.addEventListener('change', (event) => {
+    if (savedTheme === null) {
+        applyTheme(event.matches ? 'dark' : 'light');
+    }
+});
 
 document.addEventListener('click', (event) => {
     if (!(event.target instanceof Element)) {
@@ -43,6 +54,7 @@ document.addEventListener('click', (event) => {
 
     const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     applyTheme(theme);
+    savedTheme = theme;
 
     try {
         localStorage.setItem(themeStorageKey, theme);

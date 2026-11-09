@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f1f0ec">
+    <meta name="description" content="A one-week game jam project focused on responsive shooting, moving targets, and clear hit feedback.">
     <title>Target Shooter - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261028-1">
-    <script src="javaScript/theme.js?v=20261013-1"></script>
+    <link rel="stylesheet" href="Css/style.css?v=20261108-1">
+    <script src="javaScript/theme.js?v=20261108-1"></script>
+    <script src="javaScript/email-copy.js?v=20261108-1" defer></script>
+    <script src="javaScript/target-shooter-viewer.js?v=20261108-1" defer></script>
 </head>
-<body class="project-page">
+<body class="project-page project-page--target-shooter">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <!-- Navigation Bar -->
     <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-inner">
             <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
@@ -25,105 +27,89 @@
         </div>
     </nav>
 
-     <!-- Main Container -->
-    <main class="main-container" id="main-content">
-        <div class="bio-card" style="flex: 1;">
-            <a href="index.html" class="back-link">← Back to Home</a>
-            
-            <h1 class="project-title">Target Shooter</h1>
-            <p class="project-type">Aim-training prototype · Rapid development · Unreal Engine</p>
-            
-            <div style="margin: 30px 0;">
-                <video width="100%" height="auto" controls preload="metadata" poster="Images/Targetshooter.png" aria-label="Target Shooter gameplay footage" style="border-radius: 10px; background: #000;">
-                    <source src="Videos/Aim minigame.mp4" type="video/mp4">
-                </video>
-            </div>
-            <dl class="project-details" aria-label="Project details">
-                <div><dt>Contribution</dt><dd>Shooting mechanic, target behavior, hit feedback</dd></div>
-                <div><dt>Timeline</dt><dd>One week</dd></div>
-                <div><dt>Engine</dt><dd>Unreal Engine 5.6</dd></div>
-            </dl>
-    <!-- Overview -->
-            <div class="cv-section">
-                <h2>Overview</h2>
-                <p class="bio-text">
-                    Target Shooter is a fast-paced aim-training game I developed in one week. With such a short timeframe, I focused on what makes shooting feel good instead of trying to build a large or complex game.
-                </p>
-                <p class="bio-text">
-                    The prototype is built around responsive controls, clear hit feedback, and a steady rhythm of targets. Keeping the scope small let me spend the available time testing and refining the core interaction, then polish the presentation around it.
-                </p>
+    <main class="main-container sublevel-container" id="main-content">
+        <article class="sublevel-page">
+            <a href="index.html#work" class="back-link">← All projects</a>
+
+            <header class="sublevel-heading">
+                <p class="eyebrow">Project 03 / Game jam</p>
+                <h1 class="project-title">Target Shooter</h1>
+                <p class="project-type">Aim trainer · Game jam · Unreal Engine 5.6</p>
+            </header>
+
+            <div class="sublevel-intro">
+                <div>
+                    <p class="sublevel-lede">I made Target Shooter on my own during a one-week game jam. It is a small aiming minigame where you shoot moving targets and try to get a high score.</p>
+                </div>
+                <dl class="sublevel-facts" aria-label="Project details">
+                    <div><dt>Project focus</dt><dd>Aiming minigame</dd></div>
+                    <div><dt>Engine</dt><dd>Unreal Engine 5.6</dd></div>
+                </dl>
             </div>
 
-            <!-- Features -->
-            <div class="cv-section">
-                <h2>Design &amp; gameplay</h2>
-                
-                <h3>Responsive shooting</h3>
-                <p class="bio-text">
-                    The shooting system is built around immediate feedback. When the player fires, a raycast registers the shot at once, making the controls feel fast and precise.
-                </p>
-                <p class="bio-text">
-                    Targets react as soon as they are hit, reinforcing the connection between the player's input and the result. This direct response is central to making the shooting feel satisfying, so I kept the interaction immediate rather than adding delays or extra steps.
-                </p>
+            <section class="sublevel-section target-shooter-section" aria-labelledby="target-shooter-gameplay-title">
+                <div class="sublevel-section-heading">
+                    <p class="eyebrow">01 / Gameplay</p>
+                    <h2 id="target-shooter-gameplay-title">A small prototype built around feel</h2>
+                    <p>I wanted the shooting to feel quick and clear, so I used a raycast to have hits register right away. I added moving targets and hit feedback to make the minigame more fun to play. Since I worked on it for only a week, I kept the idea small and focused on getting the main mechanics working.</p>
+                </div>
 
-                <h3>Feedback &amp; clarity</h3>
-                <p class="bio-text">
-                    Clear feedback was central to the experience. A distinct sound confirms each successful shot, and targets disappear on impact. Their presentation also makes them easy to track.
-                </p>
-                <p class="bio-text">
-                    These signals make a successful hit easy to understand and more rewarding. Moving targets add challenge and variety while keeping the same simple shooting mechanic at the heart of the experience.
-                </p>
+                <div class="sublevel-story-list">
+                    <article class="sublevel-story">
+                        <a class="sublevel-story-image sublevel-zoom" href="Images/Target shooter/TargetShooterindex.png" data-target-viewer-image>
+                            <img src="Images/Target shooter/TargetShooterindex.png" alt="Wooden target range in a warmly lit medieval-style setting" loading="lazy" decoding="async">
+                        </a>
+                        <div class="sublevel-story-copy">
+                            <h3>The target range</h3>
+                            <p>I made a small target range for the minigame. The targets stand out against the wooden environment, giving players something more interesting to look at than a plain grey background.</p>
+                        </div>
+                    </article>
+                    <article class="sublevel-story">
+                        <a class="sublevel-story-image sublevel-zoom" href="Images/Target shooter/Targetshooter.gif" data-target-viewer-image>
+                            <img src="Images/Target shooter/Targetshooter.gif" alt="Gameplay view of the player aiming at targets across the range" loading="lazy" decoding="async">
+                        </a>
+                        <div class="sublevel-story-copy">
+                            <h3>Aiming and target movement</h3>
+                            <p>I added moving targets to make aiming a bit more challenging. When you hit one, it reacts straight away so you know your shot connected. The goal is to get the highest score possible. I left projectiles out of the equation to make the experience more direct.</p>
+                        </div>
+                    </article>
+                    <article class="sublevel-story">
+                        <a class="sublevel-story-image sublevel-zoom" href="Images/Target shooter/Screenshot 2026-11-08 133633.png" data-target-viewer-image>
+                            <img src="Images/Target shooter/Screenshot 2026-11-08 133633.png" alt="Unreal Engine Blueprint for target movement, hit reactions, and scoring" loading="lazy" decoding="async">
+                        </a>
+                        <div class="sublevel-story-copy">
+                            <h3>How the targets work</h3>
+                            <p>This Blueprint controls how the targets move and react when they get hit. It also updates the score when you hit a target.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-                <h3>Reference-based design</h3>
-                <p class="bio-text">
-                    I took inspiration from aim trainers such as KovaaK's FPS Aim Trainer, especially their emphasis on responsiveness and feedback. I applied those fundamentals through instant shots, clear audio confirmation, and simple, readable targets.
-                </p>
-                <p class="bio-text">
-                    From there, I developed the presentation in my own direction while keeping the focus on a clear, responsive shooting experience. The references helped me identify what to prioritize, while testing shaped how those ideas worked in my prototype.
-                </p>
-            </div>
-
-            <!-- Development -->
-            <div class="cv-section">
-                <h2>Development</h2>
-                
-                <h3>Building the core mechanic</h3>
-                <p class="bio-text">
-                    I began by recreating a simple shooting system to understand how it worked. I used a raycast to detect hits instantly, matching the responsiveness I wanted from an aim trainer.
-                </p>
-                <p class="bio-text">
-                    I then added basic feedback, including hit sounds and target reactions. Testing these elements early helped me judge whether the central action felt right before building more systems around it.
-                </p>
-
-                <h3>Rapid prototyping &amp; iteration</h3>
-                <p class="bio-text">
-                    Because the project had a short timeframe, I tested ideas quickly rather than spending too long planning. I prototyped target spawning, movement, and shooting interactions, then adjusted or removed anything that didn't feel right.
-                </p>
-                <p class="bio-text">
-                    I also tuned details such as fire rate, spawn timing, and target speed. Changing these values affected both the difficulty and rhythm, so I tested them together to create a more balanced experience.
-                </p>
-
-                <h3>Focus on the core over complexity</h3>
-                <p class="bio-text">
-                    I kept the visuals minimal early on so I could focus on how the shooting felt. Once the mechanics were working well, I refined the presentation.
-                </p>
-                <p class="bio-text">
-                    This order kept development focused on what mattered most: making a simple mechanic feel as good as possible before adding polish. It also gave me a clear way to prioritize work within the one-week limit.
-                </p>
-
-                <h3>What I learned</h3>
-                <ul class="project-learning-list">
-                    <li><strong>Responsiveness is critical</strong><span>Even a small delay can make shooting feel sluggish. Immediate input and hit registration make the experience feel precise and satisfying.</span></li>
-                    <li><strong>Feedback drives satisfaction</strong><span>Sound and visual reactions reinforce successful actions. Each hit needs a clear, immediate confirmation.</span></li>
-                    <li><strong>Simple mechanics can be powerful</strong><span>One well-executed idea can be more effective than many underdeveloped features. Testing helped me trust the focused scope.</span></li>
-                    <li><strong>Rapid iteration saves time</strong><span>Trying variations and discarding what does not work kept development moving within the short timeframe.</span></li>
-                    <li><strong>Build the core before polishing</strong><span>Keeping visuals minimal let me focus on shooting first, then add polish to support an already solid mechanic.</span></li>
-                </ul>
-            </div>
-        </div>
+            <section class="sublevel-walkthrough target-shooter-walkthrough" aria-labelledby="target-shooter-video-title">
+                <div class="sublevel-walkthrough-copy">
+                    <h3 id="target-shooter-video-title">Watch the full video</h3>
+                </div>
+                <div class="target-shooter-video-wrap">
+                    <video class="target-shooter-video" controls preload="metadata" poster="Images/Target shooter/Targetshooter.png" aria-label="Target Shooter gameplay footage">
+                        <source src="Videos/Target shooter/Aim minigame.mp4" type="video/mp4">
+                        Your browser does not support embedded video.
+                    </video>
+                </div>
+            </section>
+        </article>
     </main>
 
-    <!-- Footer -->
+    <dialog class="sublevel-image-viewer" data-target-viewer aria-label="Expanded Target Shooter image">
+        <form method="dialog">
+            <button class="sublevel-viewer-close" aria-label="Close image viewer">Close <span aria-hidden="true">×</span></button>
+        </form>
+        <figure>
+            <div class="sublevel-viewer-stage">
+                <img alt="">
+            </div>
+        </figure>
+    </dialog>
+
     <footer class="footer footer--simple">
         <div class="footer-content">
             <p>Get in touch</p>
@@ -132,11 +118,6 @@
                 <span class="footer-separator">•</span>
                 <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
-            <nav class="legal-links" aria-label="Legal information">
-                <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
-                <a class="footer-link" href="cookie-policy.html">Cookie policy</a>
-                <a class="footer-link" href="terms-and-conditions.html">Terms and conditions</a>
-            </nav>
         </div>
     </footer>
 </body>

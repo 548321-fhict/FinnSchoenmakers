@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f1f0ec">
+    <meta name="description" content="A look at the level design, environments, and visual effects created for Project Splitstar.">
     <title>Project Splitstar - Finn Schoenmakers</title>
-    <link rel="stylesheet" href="Css/style.css?v=20261028-1">
-    <script src="javaScript/theme.js?v=20261013-1"></script>
+    <link rel="stylesheet" href="Css/style.css?v=20261105-5">
+    <script src="javaScript/theme.js?v=20261108-1"></script>
+    <script src="javaScript/email-copy.js?v=20261108-1" defer></script>
+    <script src="javaScript/sublevel-gallery.js?v=20261105-2" defer></script>
 </head>
-<body class="project-page">
+<body class="project-page project-page--splitstar">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <!-- Navigation Bar -->
     <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-inner">
             <a class="wordmark" href="index.html" aria-label="Finn Schoenmakers, home">Finn<br>Schoenmakers<span class="wordmark-dot">.</span></a>
@@ -25,147 +27,315 @@
         </div>
     </nav>
 
-    <!-- Main Container -->
-    <main class="main-container" id="main-content">
-        <div class="bio-card" style="flex: 1;">
-            <a href="index.html" class="back-link">← Back to Home</a>
-            
-            <h1 class="project-title">Project Splitstar</h1>
-            <p class="project-type">Room-based shooter · Level design · Visual effects &amp; UI</p>
-            
-            <div style="margin: 30px 0;">
-                <video width="100%" height="auto" controls preload="metadata" poster="Images/ProjectSplitstar.png" aria-label="Project Splitstar gameplay trailer" style="border-radius: 10px; background: #000;">
-                    <source src="Videos/Project Splitstar Trailer.mp4" type="video/mp4">
-                </video>
+    <main class="main-container sublevel-container" id="main-content">
+        <article class="sublevel-page">
+            <a href="index.html#work" class="back-link">← All projects</a>
+
+            <header class="sublevel-heading">
+                <p class="eyebrow">Project 02 / Gameplay</p>
+                <h1 class="project-title">Project Splitstar</h1>
+                <p class="project-type">2.5D shooter · Level design · Visual effects · Unreal Engine 5.6</p>
+            </header>
+
+            <div class="sublevel-intro">
+                <div>
+                    <p class="sublevel-lede">Splitstar is a combat-focused 2.5D shooter where players fight through multiple rooms and transform between two different drones. I worked on the level design and visual effects.</p>
+                </div>
+                <dl class="sublevel-facts" aria-label="Project details">
+                    <div><dt>My contribution</dt><dd>Level design, environment, visual effects</dd></div>
+                    <div><dt>Project focus</dt><dd>2.5D room-based shooter</dd></div>
+                    <div><dt>Engine</dt><dd>Unreal Engine 5.6</dd></div>
+                </dl>
             </div>
 
-            <dl class="project-details" aria-label="Project details">
-                <div><dt>Contribution</dt><dd>Level design, environment, visual effects, UI</dd></div>
-                <div><dt>Format</dt><dd>2.5D room-based shooter</dd></div>
-                <div><dt>Engine</dt><dd>Unreal Engine 5.6</dd></div>
-            </dl>
+            <section class="sublevel-section" aria-labelledby="splitstar-layout-title">
+                <div class="sublevel-section-heading">
+                    <p class="eyebrow">01 / Layout</p>
+                    <h2 id="splitstar-layout-title">Planning the room sequence</h2>
+                    <p>I began with a room-by-room plan. I wanted the first few rooms to introduce new ideas and teach the game controls step by step.</p>
+                </div>
+                <div class="sublevel-story-list">
+                    <article class="sublevel-story">
+                        <div class="sublevel-room-gallery" data-image-gallery aria-label="Splitstar layout studies gallery">
+                            <a class="sublevel-story-image sublevel-zoom" href="Images/Splitstar/Layouts/Screenshot 2025-12-13 152541.png" data-viewer-image>
+                                <img src="Images/Splitstar/Layouts/Screenshot 2025-12-13 152541.png" alt="Overhead plan showing the Splitstar tutorial, connected rooms, and level exit" loading="lazy" decoding="async">
+                            </a>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous Splitstar layout">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                            </button>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--next" type="button" data-gallery-next aria-label="Next Splitstar layout">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                            </button>
+                            <div class="sublevel-gallery-controls">
+                                <p data-gallery-status aria-live="polite">1 of 6</p>
+                            </div>
+                            <ol data-gallery-slides hidden>
+                                <li data-src="Images/Splitstar/Layouts/Screenshot 2025-12-13 152541.png" data-alt="Overhead plan showing the Splitstar tutorial, connected rooms, and level exit" data-stage="Full-level route"></li>
+                                <li data-src="Images/Splitstar/Layouts/Screenshot 2025-12-14 134632.png" data-alt="Top-down combat room layout with cover, hazards, and entry points" data-stage="Room layout"></li>
+                                <li data-src="Images/Splitstar/Layouts/Screenshot 2025-12-14 134641.png" data-alt="Vertical room layout with platforms and hazards" data-stage="Room layout"></li>
+                                <li data-src="Images/Splitstar/Layouts/Screenshot 2025-12-14 134645.png" data-alt="Long horizontal room layout with obstacles and combat spaces" data-stage="Room layout"></li>
+                                <li data-src="Images/Splitstar/Layouts/Screenshot 2025-12-14 134653.png" data-alt="Compact room layout with platforms and hazards" data-stage="Room layout"></li>
+                                <li data-src="Images/Splitstar/Layouts/Screenshot 2025-12-14 134659.png" data-alt="Room layout with a sequence of platforms leading to the exit" data-stage="Room layout"></li>
+                            </ol>
+                        </div>
+                        <div class="sublevel-story-copy">
+                            <h3>From plan to blockout</h3>
+                            <p>I started by mapping out the level in Figma. This helped me show the group what the level could look like and gave me a better workflow: I could plan it out first instead of making decisions on the spot in Unreal Engine.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-            <!-- Overview -->
-            <div class="cv-section">
-                <h2>Overview</h2>
-                <p class="bio-text">
-                    Splitstar is a combat-focused 2.5D shooter where players fight through a sequence of rooms. I worked on the level design, visual effects, and user interface, shaping the route so each space builds on the movement and combat introduced before it.
-                </p>
-                <p class="bio-text">
-                    I began with a room-by-room plan, then used Unreal blockouts to test how the spaces played before moving into visual polish. That process helped me connect the overall progression to the details players read moment to moment: routes, obstacles, effects, and on-screen information.
-                </p>
-                <div class="project-gallery" aria-label="Splitstar level-design process">
-                    <figure>
-                        <img src="Images/Splitstar/splitstar-room-progression.png" alt="Splitstar level plan showing a tutorial, connected rooms, and an end point" loading="lazy">
-                        <figcaption>The plan maps the route from a tutorial through combat spaces to the level exit.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="Images/Splitstar/splitstar-editor-blockout.png" alt="Unreal Engine blockout of a long Splitstar combat room with cover and obstacles" loading="lazy">
-                        <figcaption>I brought the route into Unreal to test its scale, cover placement, and movement opportunities in 3D.</figcaption>
-                    </figure>
+            <section class="sublevel-section" aria-labelledby="splitstar-progress-title">
+                <div class="sublevel-section-heading">
+                    <p class="eyebrow">02 / Level design</p>
+                    <h2 id="splitstar-progress-title">Building rooms for combat</h2>
+                    <p>I divided the level into rooms with distinct gameplay purposes. Tighter spaces create pressure, while open arenas encourage players to focus on dodging rather than hiding behind cover. The layout stays readable while keeping players moving. The game follows a drone infiltrating a spaceship to destroy its core. We did not have time to implement every feature we wanted, but we were happy with the result.</p>
+                </div>
+                <div class="sublevel-story-list sublevel-room-list">
+                    <article class="sublevel-story sublevel-room">
+                        <div class="sublevel-room-gallery" data-room-gallery aria-label="Splitstar room 1 image gallery">
+                            <a class="sublevel-story-image sublevel-zoom" href="Images/Splitstar/Level progress/room 1/Screenshot 2026-11-05 104232.png" data-viewer-image>
+                                <img src="Images/Splitstar/Level progress/room 1/Screenshot 2026-11-05 104232.png" alt="Finished room 1 environment" loading="lazy" decoding="async">
+                            </a>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous room 1 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                            </button>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--next" type="button" data-gallery-next aria-label="Next room 1 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                            </button>
+                            <div class="sublevel-gallery-controls"><p data-gallery-status aria-live="polite">1 of 4</p></div>
+                            <ol data-gallery-slides hidden>
+                                <li data-src="Images/Splitstar/Level progress/room 1/Screenshot 2026-11-05 104232.png" data-alt="Finished room 1 environment" data-stage="Final room"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 1/Screenshot 2026-01-07 135644.png" data-alt="Room 1 blockout viewed in Unreal Engine" data-stage="Blockout"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 1/Screenshot 2026-01-08 152757.png" data-alt="Room 1 with metal wall panels and platforms" data-stage="Environment"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 1/Screenshot 2026-01-15 095019.png" data-alt="Room 1 with elevated platforms and industrial walls" data-stage="Lighting"></li>
+                            </ol>
+                        </div>
+                        <div class="sublevel-story-copy">
+                            <h3>Introduction</h3>
+                            <p>This room introduces the core mechanics and basic combat. I kept the layout simple so players can learn the controls, get comfortable moving through the level, shoot enemies, and try out the different drone forms.</p>
+                        </div>
+                    </article>
+                    <article class="sublevel-story sublevel-room">
+                        <div class="sublevel-room-gallery" data-room-gallery aria-label="Splitstar room 2 image gallery">
+                            <a class="sublevel-story-image sublevel-zoom" href="Images/Splitstar/Level progress/room 2/Screenshot 2026-11-05 104245.png" data-viewer-image>
+                                <img src="Images/Splitstar/Level progress/room 2/Screenshot 2026-11-05 104245.png" alt="Finished room 2 environment" loading="lazy" decoding="async">
+                            </a>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous room 2 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                            </button>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--next" type="button" data-gallery-next aria-label="Next room 2 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                            </button>
+                            <div class="sublevel-gallery-controls"><p data-gallery-status aria-live="polite">1 of 4</p></div>
+                            <ol data-gallery-slides hidden>
+                                <li data-src="Images/Splitstar/Level progress/room 2/Screenshot 2026-11-05 104245.png" data-alt="Finished room 2 environment" data-stage="Final room"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 2/Screenshot 2026-01-07 135657.png" data-alt="Room 2 blockout viewed in Unreal Engine" data-stage="Blockout"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 2/Screenshot 2026-01-08 152812.png" data-alt="Room 2 with metal wall panels and platforms" data-stage="Environment"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 2/Screenshot 2026-01-15 095041.png" data-alt="Room 2 with industrial wall panels and combat platforms" data-stage="Lighting"></li>
+                            </ol>
+                        </div>
+                        <div class="sublevel-story-copy">
+                            <h3>Vertical gameplay</h3>
+                            <p>This room focuses on upward movement and avoiding hazards. Players must dodge lasers, enemies, and bullets, including attacks from turrets and pursuing explosive enemies.</p>
+                        </div>
+                    </article>
+                    <article class="sublevel-story sublevel-room">
+                        <div class="sublevel-room-gallery" data-room-gallery aria-label="Splitstar room 3 image gallery">
+                            <a class="sublevel-story-image sublevel-zoom" href="Images/Splitstar/Level progress/room 3/Screenshot 2026-11-05 104257.png" data-viewer-image>
+                                <img src="Images/Splitstar/Level progress/room 3/Screenshot 2026-11-05 104257.png" alt="Finished room 3 environment" loading="lazy" decoding="async">
+                            </a>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous room 3 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                            </button>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--next" type="button" data-gallery-next aria-label="Next room 3 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                            </button>
+                            <div class="sublevel-gallery-controls"><p data-gallery-status aria-live="polite">1 of 4</p></div>
+                            <ol data-gallery-slides hidden>
+                                <li data-src="Images/Splitstar/Level progress/room 3/Screenshot 2026-11-05 104257.png" data-alt="Finished room 3 environment" data-stage="Final room"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 3/Screenshot 2026-01-07 135706.png" data-alt="Room 3 blockout with platforms and obstacles" data-stage="Blockout"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 3/Screenshot 2026-01-08 152822.png" data-alt="Room 3 environment with platforms and obstacles" data-stage="Environment"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 3/Screenshot 2026-01-15 095059.png" data-alt="Room 3 combat environment" data-stage="Lighting"></li>
+                            </ol>
+                        </div>
+                        <div class="sublevel-story-copy">
+                            <h3>Combining movement styles</h3>
+                            <p>This space combines different movement styles and asks players to use what they learned in the previous rooms. Players must defeat all the enemies to progress, and a counter shows how many remain.</p>
+                        </div>
+                    </article>
+                    <article class="sublevel-story sublevel-room">
+                        <div class="sublevel-room-gallery" data-room-gallery aria-label="Splitstar room 4 image gallery">
+                            <a class="sublevel-story-image sublevel-zoom" href="Images/Splitstar/Level progress/room 4/Screenshot 2026-11-05 104317.png" data-viewer-image>
+                                <img src="Images/Splitstar/Level progress/room 4/Screenshot 2026-11-05 104317.png" alt="Finished room 4 environment" loading="lazy" decoding="async">
+                            </a>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous room 4 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                            </button>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--next" type="button" data-gallery-next aria-label="Next room 4 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                            </button>
+                            <div class="sublevel-gallery-controls"><p data-gallery-status aria-live="polite">1 of 4</p></div>
+                            <ol data-gallery-slides hidden>
+                                <li data-src="Images/Splitstar/Level progress/room 4/Screenshot 2026-11-05 104317.png" data-alt="Finished room 4 environment" data-stage="Final room"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 4/Screenshot 2026-01-07 135719.png" data-alt="Room 4 blockout viewed in Unreal Engine" data-stage="Blockout"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 4/Screenshot 2026-01-08 152831.png" data-alt="Room 4 environment viewed in Unreal Engine" data-stage="Environment"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 4/Screenshot 2026-01-15 095120.png" data-alt="Room 4 with its platform layout and wall details" data-stage="Lighting"></li>
+                            </ol>
+                        </div>
+                        <div class="sublevel-story-copy">
+                            <h3>The Gauntlet</h3>
+                            <p>This is the first real challenge of the game: a long stretch of varied combat encounters, from dashing through lasers to fighting swarms of enemies. Enemies can drop short-lived power-ups, such as a movement speed boost, increased fire rate, or health regeneration.</p>
+                        </div>
+                    </article>
+                    <article class="sublevel-story sublevel-room">
+                        <div class="sublevel-room-gallery" data-room-gallery aria-label="Splitstar room 5 image gallery">
+                            <a class="sublevel-story-image sublevel-zoom" href="Images/Splitstar/Level progress/room 5/Screenshot 2026-11-05 104331.png" data-viewer-image>
+                                <img src="Images/Splitstar/Level progress/room 5/Screenshot 2026-11-05 104331.png" alt="Finished Splitstar boss arena with industrial lighting and platforms" loading="lazy" decoding="async">
+                            </a>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous room 5 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                            </button>
+                            <button class="sublevel-gallery-arrow sublevel-gallery-arrow--next" type="button" data-gallery-next aria-label="Next room 5 version">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                            </button>
+                            <div class="sublevel-gallery-controls"><p data-gallery-status aria-live="polite">1 of 4</p></div>
+                            <ol data-gallery-slides hidden>
+                                <li data-src="Images/Splitstar/Level progress/room 5/Screenshot 2026-11-05 104331.png" data-alt="Finished Splitstar boss arena with industrial lighting and platforms" data-stage="Final room"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 5/Screenshot 2026-01-07 135729.png" data-alt="Room 5 blockout viewed in Unreal Engine" data-stage="Blockout"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 5/Screenshot 2026-01-08 152843.png" data-alt="Room 5 with modular walls and combat platforms" data-stage="Environment"></li>
+                                <li data-src="Images/Splitstar/Level progress/room 5/Screenshot 2026-01-15 095137.png" data-alt="Room 5 environment viewed from another angle" data-stage="Lighting"></li>
+                            </ol>
+                        </div>
+                        <div class="sublevel-story-copy">
+                            <h3>Boss arena</h3>
+                            <p>We planned a boss fight for the final level, but time constraints meant we had to simplify it. We made the turret enemies more challenging by giving them more health and damage.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="sublevel-section" aria-labelledby="splitstar-vfx-title">
+                <div class="sublevel-section-heading">
+                    <p class="eyebrow">03 / Visual effects</p>
+                    <h2 id="splitstar-vfx-title">Making VFX for Splitstar</h2>
+                    <p>Alongside level design, I worked on the game's visual effects, mainly focusing on the weapons. I wanted these effects to help players better understand the gameplay and feel more immersed in the game.</p>
+                </div>
+                <div class="sublevel-story-list">
+                    <article class="sublevel-story">
+                        <figure class="sublevel-light-scene splitstar-effect-scene" aria-label="Splitstar muzzle flash effect and blueprint">
+                            <a class="sublevel-light-gif sublevel-zoom" href="Videos/Project splitstar/Gifs/Muzzle flash short.gif" data-viewer-image>
+                                <img src="Videos/Project splitstar/Gifs/Muzzle flash short.gif" alt="Animated muzzle flash and projectile effect in a Splitstar room" loading="lazy" decoding="async">
+                            </a>
+                            <div class="splitstar-effect-blueprints">
+                                <div class="sublevel-room-gallery splitstar-blueprint-gallery" data-image-gallery aria-label="Muzzle flash and bullet impact blueprint gallery">
+                                    <a class="sublevel-story-image sublevel-zoom" href="Images/Splitstar/Blueprints/Screenshot 2026-11-05 105049.png" data-viewer-image>
+                                        <img src="Images/Splitstar/Blueprints/Screenshot 2026-11-05 105049.png" alt="Unreal Engine Niagara system for the Splitstar muzzle flash" loading="lazy" decoding="async">
+                                    </a>
+                                    <button class="sublevel-gallery-arrow sublevel-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous muzzle flash blueprint">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                                    </button>
+                                    <button class="sublevel-gallery-arrow sublevel-gallery-arrow--next" type="button" data-gallery-next aria-label="Next muzzle flash blueprint">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                                    </button>
+                                    <div class="sublevel-gallery-controls splitstar-blueprint-status"><p data-gallery-status aria-live="polite">1 of 2</p></div>
+                                    <ol data-gallery-slides hidden>
+                                        <li data-src="Images/Splitstar/Blueprints/Screenshot 2026-11-05 105049.png" data-alt="Unreal Engine Niagara system for the Splitstar muzzle flash" data-stage="Muzzle flash"></li>
+                                        <li data-src="Images/Splitstar/Blueprints/Screenshot 2026-11-05 105003.png" data-alt="Unreal Engine Niagara system for bullet impact, sparks, and directional burst effects" data-stage="Bullet impact"></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="sublevel-story-copy">
+                            <h3>Muzzle flash and bullet impact</h3>
+                            <p>The muzzle flash and bullet impact give players visual feedback when they fire and their bullets hit a target. This was my first time using Unreal Engine's Niagara system. I like how much control and customization it offers while remaining relatively simple to use.</p>
+                        </div>
+                    </article>
+                    <article class="sublevel-story">
+                        <figure class="sublevel-light-scene splitstar-effect-scene" aria-label="Splitstar explosion effect and blueprint">
+                            <a class="sublevel-light-gif sublevel-zoom" href="Videos/Project splitstar/Gifs/Explosion vfx short (1).gif" data-viewer-image>
+                                <img src="Videos/Project splitstar/Gifs/Explosion vfx short (1).gif" alt="Animated explosion effect in a Splitstar room" loading="lazy" decoding="async">
+                            </a>
+                            <a class="sublevel-light-blueprint sublevel-zoom" href="Images/Splitstar/Blueprints/Screenshot 2026-11-05 105023.png" data-viewer-image aria-label="Open the blueprint for the layered explosion effect">
+                                <img src="Images/Splitstar/Blueprints/Screenshot 2026-11-05 105023.png" alt="Unreal Engine Niagara system with sparks, smoke, and fire for the explosion" loading="lazy" decoding="async">
+                            </a>
+                        </figure>
+                        <div class="sublevel-story-copy">
+                            <h3>Layered explosion effect</h3>
+                            <p>I built the explosion in stages. First, I adapted the bullet impact from the previous effect so the sparks flew in all directions. Then I created the smoke by copying the spark effect, disabling gravity, and changing the velocity so it stayed together. I used a similar approach for the fire and adjusted its properties to suit the effect.</p>
+                        </div>
+                    </article>
+                    <article class="sublevel-story">
+                        <figure class="sublevel-light-scene splitstar-effect-scene" aria-label="Splitstar laser image and blueprints">
+                            <a class="sublevel-light-gif sublevel-zoom" href="Images/Splitstar/VFX/Screenshot 2026-11-05 104847.png" data-viewer-image>
+                                <img src="Images/Splitstar/VFX/Screenshot 2026-11-05 104847.png" alt="Bright orange light bars illuminating a metallic Splitstar room" loading="lazy" decoding="async">
+                            </a>
+                            <div class="splitstar-effect-blueprints splitstar-effect-blueprints--laser">
+                                <a class="sublevel-light-blueprint sublevel-zoom" href="Images/Splitstar/Blueprints/Screenshot 2026-11-05 105732.png" data-viewer-image aria-label="Open the laser line trace blueprint">
+                                    <img src="Images/Splitstar/Blueprints/Screenshot 2026-11-05 105732.png" alt="Large Unreal Engine blueprint graph for the laser line trace" loading="lazy" decoding="async">
+                                </a>
+                            </div>
+                        </figure>
+                        <div class="sublevel-story-copy">
+                            <h3>Self-regulating lasers</h3>
+                            <p>I made these lasers to add an extra challenge. They use a line trace to adjust their length to fit the room, and periodically switch on and off so players can pass through without making the challenge too easy.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <div class="sublevel-walkthrough">
+                <div class="sublevel-walkthrough-copy">
+                    <h3>Watch the Project Splitstar trailer</h3>
+                    <p class="sublevel-note">Disclaimer: AI was used to create the voice and poster for this video.</p>
+                </div>
+                <div class="sublevel-cinema" data-cinema>
+                    <video class="sublevel-cinema-video" muted playsinline preload="none" poster="Images/Splitstar/Level progress/room 5/Screenshot 2026-11-05 104331.png" aria-label="Project Splitstar gameplay trailer">
+                        <source data-src="Videos/Project splitstar/Project Splitstar Trailer.mp4" type="video/mp4">
+                        Your browser does not support embedded video.
+                    </video>
+                    <div class="sublevel-cinema-shade" aria-hidden="true"></div>
+                    <p class="sublevel-cinema-label">
+                        <span class="sublevel-cinema-live" aria-hidden="true"></span>
+                        <span class="sublevel-cinema-status" data-cinema-status role="status" aria-live="polite" aria-atomic="true">Project Splitstar trailer</span>
+                    </p>
+                    <div class="sublevel-cinema-controls" aria-label="Trailer controls">
+                        <button class="sublevel-cinema-button" type="button" data-cinema-play aria-label="Play trailer" aria-pressed="false">
+                            <span data-cinema-play-icon aria-hidden="true">▶</span>
+                            <span data-cinema-play-label>Play</span>
+                        </button>
+                        <label class="sublevel-cinema-progress">
+                            <input type="range" min="0" max="1000" value="0" step="1" data-cinema-progress aria-label="Trailer position" disabled>
+                        </label>
+                        <output class="sublevel-cinema-time" data-cinema-time aria-live="off">0:00</output>
+                        <button class="sublevel-cinema-button sublevel-cinema-mute" type="button" data-cinema-mute aria-label="Unmute trailer" aria-pressed="false">
+                            <span data-cinema-mute-icon aria-hidden="true">♪</span>
+                            <span data-cinema-mute-label>Sound off</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-
-            <!-- Features -->
-            <div class="cv-section">
-                <h2>Design &amp; gameplay</h2>
-                
-                <h3>Spatial design &amp; player flow</h3>
-                <p class="bio-text">
-                    I divided the level into rooms with distinct gameplay purposes. Their layouts and obstacles help players understand where they can move, keeping attention on the encounter rather than on finding a route.
-                </p>
-                <p class="bio-text">
-                    Room size and shape control the pace. Tighter spaces create pressure, while more open arenas reward positioning and awareness. Across the level, the layout stays readable while asking players to keep moving. This variety helps each encounter feel like a new step in the journey rather than another version of the same room.
-                </p>
-
-                <h3>Room-by-room progression</h3>
-                <p class="bio-text">Each room has a distinct role in the progression, building from the introduction of the core mechanics to a final test of the player's skills. I used this sequence to introduce challenges in stages, then combine them in later encounters.</p>
-                <ul class="project-list">
-                    <li><strong>Introduction:</strong> teaches the core mechanics and basic combat.</li>
-                    <li><strong>Vertical gameplay:</strong> focuses on upward movement and avoiding hazards.</li>
-                    <li><strong>Transition space:</strong> combines movement styles to create a smoother flow.</li>
-                    <li><strong>Gauntlet:</strong> tests endurance and punishes mistakes.</li>
-                    <li><strong>Boss arena:</strong> uses an open layout that demands constant movement and awareness.</li>
-                </ul>
-                <div class="project-gallery" aria-label="Splitstar finished combat environments">
-                    <figure>
-                        <img src="Images/Splitstar/splitstar-final-room.png" alt="A finished Splitstar arena with layered platforms, industrial lighting, and red-lit doors" loading="lazy">
-                        <figcaption>Lighting, platforms, and contrasting door lights make the combat space readable without losing its industrial mood.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="Images/Splitstar/splitstar-corridor.png" alt="A long finished Splitstar corridor with repeated metal panels and bright strip lighting" loading="lazy">
-                        <figcaption>A longer corridor gives the room sequence a visual breather while keeping the same metallic setting.</figcaption>
-                    </figure>
-                </div>
-
-                <h3>Environment &amp; readability</h3>
-                <p class="bio-text">
-                    I designed the environment to make gameplay clear while maintaining a consistent visual style. Walls, floors, and obstacles define movement space and interaction areas. Careful spacing and alignment help prevent visual clutter during combat.
-                </p>
-                <p class="bio-text">
-                    Curved wall elements make the rooms feel less artificial. I also enclosed the level to maintain immersion and hide the world beyond the playable area. Repeating the industrial materials across different spaces ties the sequence together, while room layouts and lighting help distinguish one encounter from the next.
-                </p>
-
-                <h3>Weapon feedback</h3>
-                <p class="bio-text">
-                    I designed the weapon effects to make combat feel responsive. The muzzle flash gives players immediate visual confirmation when they fire, helping connect an input to what happens on screen.
-                </p>
-                <div class="project-gallery" aria-label="Splitstar combat visual effects">
-                    <figure>
-                        <img src="Images/Splitstar/splitstar-muzzle-flash.gif" alt="Animated muzzle flash and projectile effect in a Splitstar room" loading="lazy">
-                        <figcaption>The muzzle flash makes each shot visible against the dark metal walls.</figcaption>
-                    </figure>
-                </div>
-
-                <h3>Layered explosion effect</h3>
-                <p class="bio-text">
-                    I built the explosion in layers, combining sparks, smoke, fire, and a flash of light so the impact reads clearly against the dark environment.
-                </p>
-                <p class="bio-text">
-                    Starting with elements from the impact and dust effects helped me build a larger effect that still felt consistent with the rest of the game. Combining the layers gave the explosion a clear beginning and impact, while its bright flash stands out against the darker environment.
-                </p>
-                <div class="project-gallery" aria-label="Splitstar explosion effect">
-                    <figure>
-                        <img src="Images/Splitstar/splitstar-explosion.gif" alt="Animated explosion effect in a Splitstar room" loading="lazy">
-                        <figcaption>Sparks, smoke, fire, and light combine into a single readable impact.</figcaption>
-                    </figure>
-                </div>
-
-                <h3>HUD structure</h3>
-                <p class="bio-text">
-                    I divided the HUD into two parts to keep information organized. The player-focused section displays health, ability cooldowns, and active power-ups. These details stay readable at a glance so players can make quick decisions during combat.
-                </p>
-                <p class="bio-text">
-                    The system-focused section shows progression details, such as the current room and score. This gives players useful context without distracting them from the action. Separating immediate player information from level progress made it easier to scan the HUD during a fast encounter.
-                </p>
-
-            </div>
-
-            <!-- Development -->
-            <div class="cv-section">
-                <h2>Development</h2>
-                
-                <h3>Planning, testing &amp; iteration</h3>
-                <p class="bio-text">
-                    I started by mapping out the level in Figma, then built greybox blockouts in Unreal Engine to test navigation, scale, and movement. This gave me a chance to check the level's basic flow before committing to detailed environments.
-                </p>
-                <p class="bio-text">
-                    During playtests, I checked whether the layout felt clear and intuitive, and whether the movement spaces supported the intended encounters. I then refined the level by adding elevation, increasing the challenge in key areas, and introducing paths that asked players to weigh risk against reward.
-                </p>
-
-                <h3>What I learned</h3>
-                <ul class="project-learning-list">
-                    <li><strong>Progression sustains engagement</strong><span>Varying rooms and encounters can raise the challenge gradually without overwhelming the player.</span></li>
-                    <li><strong>Blockouts support fast iteration</strong><span>Testing navigation and scale early makes layout changes easier before detailed environments are built.</span></li>
-                    <li><strong>Playtesting validates decisions</strong><span>Testing helped me check whether the route and difficulty worked for players before moving on to final polish.</span></li>
-                    <li><strong>Integrate effects with the experience</strong><span>Planning for VFX alongside combat helps effects communicate gameplay instead of feeling like a late addition.</span></li>
-                    <li><strong>Clear UI supports quick decisions</strong><span>Organizing player information separately from room and score progress keeps the HUD easier to scan during combat.</span></li>
-                </ul>
-            </div>
-        </div>
+        </article>
     </main>
 
-    <!-- Footer -->
+    <dialog class="sublevel-image-viewer splitstar-image-viewer" data-image-viewer aria-label="Expanded project image">
+        <form method="dialog">
+            <button class="sublevel-viewer-close" aria-label="Close image viewer">Close <span aria-hidden="true">×</span></button>
+        </form>
+        <figure>
+            <div class="sublevel-viewer-stage">
+                <button class="sublevel-viewer-arrow sublevel-viewer-arrow--previous" type="button" data-viewer-previous aria-label="Previous image" hidden>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                </button>
+                <img alt="">
+                <button class="sublevel-viewer-arrow sublevel-viewer-arrow--next" type="button" data-viewer-next aria-label="Next image" hidden>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+            </div>
+        </figure>
+    </dialog>
+
     <footer class="footer footer--simple">
         <div class="footer-content">
             <p>Get in touch</p>
@@ -174,11 +344,6 @@
                 <span class="footer-separator">•</span>
                 <a href="https://www.linkedin.com/in/finn-schoenmakers-107a82269" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
-            <nav class="legal-links" aria-label="Legal information">
-                <a class="footer-link" href="privacy-policy.html">Privacy policy</a>
-                <a class="footer-link" href="cookie-policy.html">Cookie policy</a>
-                <a class="footer-link" href="terms-and-conditions.html">Terms and conditions</a>
-            </nav>
         </div>
     </footer>
 </body>
